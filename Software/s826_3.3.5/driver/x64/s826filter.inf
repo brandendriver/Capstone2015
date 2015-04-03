@@ -1,0 +1,146 @@
+;Copyright (c) 2013 Sensoray Company Inc.
+;s826filter.inf
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Provider    = %SENSORAY%
+Class=DataAcquisition
+ClassGUID={6BD5018A-FB6B-4e60-A163-33BCBA4F205B}
+DriverVer=05/01/2014,1.0.2
+CatalogFile = s826filter.cat
+
+
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=DataClassReg     
+
+[DataClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+;*****************************************
+; S826 Device Filter Install Section
+;*****************************************
+
+[Manufacturer]
+%StdMfg%=Standard,NTAMD64
+
+; For Win2K
+[Standard]
+; DisplayName                   Section           DeviceId
+; -----------                   -------           --------
+%S826Filter.DeviceDesc%=S826Filter, PCI\VEN_10B5&DEV_8111
+
+; For XP and later
+[Standard.NTAMD64]
+%S826Filter.DeviceDesc%=S826Filter, PCI\VEN_10B5&DEV_8111
+
+
+[S826Filter.NT]  
+CopyFiles=S826Filter.NT.Copy
+
+[S826Filter.NT.Copy]
+s826filter.sys
+
+[S826Filter.NT.HW]
+AddReg = S826Filter.NT.HW.AddReg
+
+
+[S826Filter.NT.HW.AddReg]  
+;HKR,,"UpperFilters",0x00010000,"S826Filter"
+HKR,,"UpperFilters",%REG_MULTI_SZ_APPEND%,"S826Filter"
+HKR,,"DeviceType",%REG_DWORD%,0x22
+HKR,,"Security",,"D:P(A;;GA;;;SY)(A;;GA;;;BA)"  ; ACL allowing System and Admin
+
+
+;*****************************************
+; Device Filter Service Section
+;*****************************************
+
+[S826Filter.NT.Services]
+;Do not specify SPSVCINST_ASSOCSERVICE on filter drivers. 
+AddService      = S826Filter,, filter_Service_Inst 
+AddService = pci, %SPSVCINST_ASSOCSERVICE%, pci_ServiceInstallSection
+;AddService      = wdffeatured, %SPSVCINST_ASSOCSERVICE%, wdffeatured_Service_Inst
+
+[filter_Service_Inst]
+DisplayName     = %filter.SvcDesc%                            
+ServiceType     = 1                  ; SERVICE_KERNEL_DRIVER
+StartType       = 3                  ; SERVICE_DEMAND_START
+ErrorControl    = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\s826filter.sys                            
+
+[pci_ServiceInstallSection]
+DisplayName    = %pci_svcdesc%
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_BOOT_START%
+ErrorControl   = %SERVICE_ERROR_CRITICAL%
+ServiceBinary  = %12%\pci.sys
+LoadOrderGroup = "Boot Bus Extender"
+
+
+;*************************
+; Source file information
+;*************************
+
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+s826filter.sys         = 1,,
+
+;--- S826Filter Coinstaller installation ------
+
+[DestinationDirs]
+S826Filter_CoInstaller_CopyFiles = 11
+
+[S826Filter.NT.CoInstallers]
+AddReg          = S826Filter_CoInstaller_AddReg
+CopyFiles       = S826Filter_CoInstaller_CopyFiles
+
+[S826Filter_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[S826Filter_CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[S826Filter.NT.Wdf]
+KmdfService = S826Filter, Filter_wdfsect
+;KmdfService              = wdffeatured, wdffeatured_wdfsect
+
+[Filter_wdfsect]
+KmdfLibraryVersion       = 1.9
+
+
+[Strings]
+pci_svcdesc = "PCI Bus Driver"
+SPSVCINST_ASSOCSERVICE   = 0x00000002
+SENSORAY                 = "Sensoray"
+StdMfg                   = "(Standard system devices)"
+DiskId1                  = "S826 Filter Installation Disk #1"
+S826Filter.DeviceDesc    = "Sensoray 826 Filter"
+filter.SvcDesc           = "Sensoray 826 Filter Driver"
+;S826FILTERD.SVCDESC          = "Sensoray 826 Filter Device Driver"
+
+SERVICE_KERNEL_DRIVER  = 1
+SERVICE_BOOT_START     = 0
+SERVICE_DEMAND_START   = 3
+SERVICE_ERROR_NORMAL   = 1
+SERVICE_ERROR_CRITICAL = 3
+
+REG_EXPAND_SZ          = 0x00020000
+REG_MULTI_SZ_APPEND    = 0x00010008
+REG_MULTI_SZ           = 0x00010000 
+REG_DWORD              = 0x00010001
+REG_DWORD_NOCLOBBER    = 0x00010003
+REG_BINARY             = 0x00000001
+ClassName       = "Data Acquisition"

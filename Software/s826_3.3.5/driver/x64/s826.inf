@@ -1,0 +1,110 @@
+;s826.inf
+;Sensoray 826 Windows Driver
+;Copyright : Sensoray Company Inc. 2010
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=DataAcquisition
+ClassGUID={6BD5018A-FB6B-4e60-A163-33BCBA4F205B}
+Provider=%SENSORAY%
+DriverVer=05/01/2014,1.0.12
+CatalogFile=s826.cat
+
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=DataClassReg     
+
+[DataClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; ================= Device section =====================
+
+[Manufacturer]
+%MfgName%=Sensoray,NTamd64
+
+; For Win2K
+[Sensoray]
+%PCI\VEN_10B5&DEV_9056&SUBSYS_905610B5.DeviceDesc%=s826drv.Dev, PCI\VEN_10B5&DEV_9056&SUBSYS_905610B5
+%PCI\VEN_10B5&DEV_9056&SUBSYS_60000826.DeviceDesc%=s826drv.Dev, PCI\VEN_10B5&DEV_9056&SUBSYS_60000826
+%PCI\VEN_10B5&DEV_9056&SUBSYS_08266000.DeviceDesc%=s826drv.Dev, PCI\VEN_10B5&DEV_9056&SUBSYS_08266000
+; For XP and later
+[Sensoray.NTamd64]
+%PCI\VEN_10B5&DEV_9056&SUBSYS_905610B5.DeviceDesc%=s826drv.Dev, PCI\VEN_10B5&DEV_9056&SUBSYS_905610B5
+%PCI\VEN_10B5&DEV_9056&SUBSYS_60000826.DeviceDesc%=s826drv.Dev, PCI\VEN_10B5&DEV_9056&SUBSYS_60000826
+%PCI\VEN_10B5&DEV_9056&SUBSYS_08266000.DeviceDesc%=s826drv.Dev, PCI\VEN_10B5&DEV_9056&SUBSYS_08266000
+
+[s826drv.Dev.NTamd64]
+CopyFiles=s826drv.Files.Ext
+Include=machine.inf
+
+[s826drv.Dev.NTamd64.Services]
+Addservice = s826drv, 0x00000002, s826drv.AddService
+
+[s826drv.AddService]
+DisplayName    = %s826drv.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\s826.sys
+AddReg         = s826drv.AddReg
+LoadOrderGroup = Base
+
+[s826drv.AddReg]
+HKR,"Parameters","MaximumTransferSize",0x10001,4096
+HKR,"Parameters","DebugLevel",0x10001,2
+HKR, Parameters\Wdf, VerboseOn,       0x00010001, 1
+HKR, Parameters\Wdf, VerifierOn,      0x00010001, 1
+HKR, Parameters\Wdf, DbgBreakOnError, 0x00010001, 1
+
+[s826drv.Files.Ext]
+s826.sys
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles]
+s826.sys = 1
+
+;-------------- WDF Coinstaller installation
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[s826drv.Dev.NTamd64.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[s826drv.Dev.NTamd64.Wdf]
+KmdfService = s826drv, s826drv_wdfsect
+
+[s826drv_wdfsect]
+KmdfLibraryVersion = 1.9
+
+;---------------------------------------------------------------;
+
+[Strings]
+SENSORAY        = "Sensoray Company Inc"
+MfgName         = "Sensoray Company Inc"
+Disk_Description= "Sensoray 826 Installation Disk"
+s826drv.SvcDesc = "Sensoray 826 Driver"
+ClassName       = "Data Acquisition"
+PCI\VEN_10B5&DEV_9056&SUBSYS_905610B5.DeviceDesc="Sensoray 826 Driver"
+PCI\VEN_10B5&DEV_9056&SUBSYS_60000826.DeviceDesc="Sensoray 826 Driver"
+PCI\VEN_10B5&DEV_9056&SUBSYS_08266000.DeviceDesc="Sensoray 826 Driver"
+
+
+

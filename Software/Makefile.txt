@@ -1,0 +1,11 @@
+CC=gcc
+CFLAGS+=-D_LINUX
+
+runDemo: ioBoardController.o lib826_64.a
+	$(CC) $(CFLAGS) ioBoardController.o -o runDemo -lm -lrt -L./ -l826_64
+
+ioBoardController.o: ioBoardController.c
+	$(CC) $(CFLAGS)  -Wall -Wextra -DOSTYPE_LINUX -c  ioBoardController.c -o ioBoardController.o
+
+clean:
+	rm -rf ioBoardController.o runDemo
