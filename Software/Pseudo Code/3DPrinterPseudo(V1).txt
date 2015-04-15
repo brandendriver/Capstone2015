@@ -1,0 +1,95 @@
+#include <sys\timeb.h> 
+ 
+bool IsDepositing()
+{
+    return GetG1() == 0 && GetG0() == 1;
+}
+ 
+bool IsFastMoving()
+{
+    return GetG1() == 1 && GetG0() == 0;
+}
+ 
+int Seek()
+{
+    int i = 0
+    while(!IsFastMoving())
+    {
+        sleep(1); //ensure cpu doesn't turn into a toaster while waiting
+        i++
+    }
+    return i;
+}
+ 
+void main()
+{
+    struct timeb currentElapsed, lastChecked;
+    int diff;
+    int i = 0;
+    ftime elapsed;
+    
+    PrompCNCSpeed();
+    Seek(); 
+    
+    StopCNCMovement();
+   
+    while (true)
+    {
+        if (GetTemperature() < GetTemperatureThreshold())
+        {
+            Torch();
+        }
+        SetWireSpeed();
+        StartWelder();
+        
+        ftime(&lastChecked); //mark the time
+        
+        do
+        {
+            
+            GetWelderCurrent()
+                
+            while (GetTempature() == GetGoodTemperature() &&
+                   GetCurrent() == GetGoodCurrent() &&
+                   GetWireSpeed() == GetGoodWireSpeed())
+            {
+                if (GetWelderCurrent() < GetCurrentThreshold())
+                {
+                    SetGoodCurrent();
+                    continue;
+                }
+                
+                if (GetTemperature() < GetTemperatureThreshold())
+                {
+                    StopCNCMovement();
+                    Torch();
+                    break;
+                }
+                
+                if GetCNCSpeed() != GetWireSpeed()
+                {
+                    AdjustWireSpeed();
+                }
+            }
+            ftime(&currentElapsed);
+            elapsed = lastChecked - currentElapsed;
+        } while (elapsed >= 90 || IsFastMoving())
+        
+        if (elapsed >= 90)
+        {
+            StopWelder();
+            StopCNCMovement();
+            sleep(480000)
+        }
+        else if (IsFastMoving())
+        {
+            StopWelder();
+            i = Seek();
+            if ( i > 30000)
+            {
+                StopCNCMovement();
+                return;
+            }
+        }
+    }
+}
