@@ -1,0 +1,20 @@
+﻿Build started 4/16/2015 6:16:11 PM.
+     1>Project "c:\Users\Brian\documents\visual studio 2013\Projects\EncoderTest\EncoderTest\EncoderTest.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt main.c
+         main.c
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\826api.h(155): error C2061: syntax error : identifier 'uint64'
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\826api.h(155): error C2059: syntax error : ';'
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(12): warning C4047: 'initializing' : 'uint' differs in levels of indirection from 'void *'
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(16): warning C4047: 'initializing' : 'uint' differs in levels of indirection from 'void *'
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(21): warning C4047: 'function' : 'uint *' differs in levels of indirection from 'uint **'
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(21): warning C4024: 'S826_CounterSnapshotRead' : different types for formal and actual parameter 3
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(21): warning C4024: 'S826_CounterSnapshotRead' : different types for formal and actual parameter 4
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(21): warning C4024: 'S826_CounterSnapshotRead' : different types for formal and actual parameter 5
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(25): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(28): warning C4013: 'pintf' undefined; assuming extern returning int
+     1>Done Building Project "c:\Users\Brian\documents\visual studio 2013\Projects\EncoderTest\EncoderTest\EncoderTest.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.19
