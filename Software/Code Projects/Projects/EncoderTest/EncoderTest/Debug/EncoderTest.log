@@ -1,20 +1,16 @@
-﻿Build started 4/16/2015 6:16:11 PM.
-     1>Project "c:\Users\Brian\documents\visual studio 2013\Projects\EncoderTest\EncoderTest\EncoderTest.vcxproj" on node 2 (Build target(s)).
+﻿Build started 4/17/2015 3:40:19 PM.
+     1>Project "C:\Users\a\Documents\Capstone2015\Software\Code Projects\Projects\EncoderTest\EncoderTest\EncoderTest.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt main.c
          main.c
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\826api.h(155): error C2061: syntax error : identifier 'uint64'
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\826api.h(155): error C2059: syntax error : ';'
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(12): warning C4047: 'initializing' : 'uint' differs in levels of indirection from 'void *'
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(16): warning C4047: 'initializing' : 'uint' differs in levels of indirection from 'void *'
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(21): warning C4047: 'function' : 'uint *' differs in levels of indirection from 'uint **'
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(21): warning C4024: 'S826_CounterSnapshotRead' : different types for formal and actual parameter 3
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(21): warning C4024: 'S826_CounterSnapshotRead' : different types for formal and actual parameter 4
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(21): warning C4024: 'S826_CounterSnapshotRead' : different types for formal and actual parameter 5
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(25): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\brian\documents\visual studio 2013\projects\encodertest\encodertest\main.c(28): warning C4013: 'pintf' undefined; assuming extern returning int
-     1>Done Building Project "c:\Users\Brian\documents\visual studio 2013\Projects\EncoderTest\EncoderTest\EncoderTest.vcxproj" (Build target(s)) -- FAILED.
+     1>c:\users\a\documents\capstone2015\software\code projects\projects\encodertest\encodertest\main.c(17): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\a\documents\capstone2015\software\code projects\projects\encodertest\encodertest\main.c(27): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\a\documents\capstone2015\software\code projects\projects\encodertest\encodertest\main.c(31): warning C4716: 'LinearVelocity' : must return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\a\Documents\Capstone2015\Software\Code Projects\Projects\EncoderTest\Debug\EncoderTest.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\a\Documents\Capstone2015\Software\s826_3.3.5\api\x32 C:\Users\a\Documents\Capstone2015\Software\s826_3.3.5\api\x32\s826.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\a\Documents\Capstone2015\Software\Code Projects\Projects\EncoderTest\Debug\EncoderTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\a\Documents\Capstone2015\Software\Code Projects\Projects\EncoderTest\Debug\EncoderTest.lib" /MACHINE:X86 Debug\main.obj
+         EncoderTest.vcxproj -> C:\Users\a\Documents\Capstone2015\Software\Code Projects\Projects\EncoderTest\Debug\EncoderTest.exe
+     1>Done Building Project "C:\Users\a\Documents\Capstone2015\Software\Code Projects\Projects\EncoderTest\EncoderTest\EncoderTest.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.19
+Time Elapsed 00:00:01.01

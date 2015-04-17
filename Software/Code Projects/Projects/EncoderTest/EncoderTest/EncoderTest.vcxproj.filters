@@ -20,8 +20,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\GitHub\Capstone2015\Software\s826_3.3.5\api\826api.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="826api.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
