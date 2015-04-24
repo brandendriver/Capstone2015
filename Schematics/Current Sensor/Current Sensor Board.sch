@@ -269,9 +269,9 @@
 <wire x1="5.08" y1="-1.143" x2="5.08" y2="-4.064" width="0.1524" layer="21"/>
 <wire x1="-5.08" y1="-4.064" x2="-5.08" y2="-1.143" width="0.1524" layer="21"/>
 <circle x="-4.6228" y="-3.7084" radius="0.254" width="0" layer="21"/>
-<pad name="IN" x="-2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="GND" x="0" y="-2.54" drill="1.016" shape="long" rot="R90"/>
-<pad name="OUT" x="2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/>
+<pad name="IN" x="-2.54" y="-2.54" drill="1.2" shape="long" rot="R90"/>
+<pad name="GND" x="0" y="-2.54" drill="1.2" shape="long" rot="R90"/>
+<pad name="OUT" x="2.54" y="-2.54" drill="1.2" shape="long" rot="R90"/>
 <text x="-5.08" y="-6.0452" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5.08" y="-7.62" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-0.635" y="-3.81" size="1.27" layer="51" ratio="10">-</text>
