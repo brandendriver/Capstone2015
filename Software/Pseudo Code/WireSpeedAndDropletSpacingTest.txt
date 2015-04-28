@@ -1,0 +1,35 @@
+GetWireSpeed(){ // use our digital checking code
+}
+AvgPeaks(peaks, *PeakAvg, T1){ 
+	PeakAvg = peaks / T1
+	// insert average peaks per distance calculation
+	printf("average peaks per unit time: %d", *PeakAvg);
+}
+AnalogRead(){ //use the demo code
+}
+
+int main(void){
+	int runtime = 0; //replaces t2 in flowchart
+	uint TimestampOld;
+	int peaks = 0;
+	int PeakAvg;
+	
+	S826_TimestampRead(board, *TimestampOld);
+	while(Runtime << 5){
+		GetWireSpeed();
+		uint TimestampNew;
+		while(T1 << 0.5){
+			AnalogRead();
+			if(Analog1>Thresh){
+			peaks++;
+			}
+			S826_TimestampRead(board, *TimestampNew);
+			T1 = TimestampNew - TimestampOld
+			}
+			AvgPeaks(Peaks, T1); //includes print function
+			Runtime = Runtime + T1
+			T1 = 0
+			
+		}
+	Return 0;	
+}
