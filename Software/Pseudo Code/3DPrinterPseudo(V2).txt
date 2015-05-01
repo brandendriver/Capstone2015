@@ -10,16 +10,7 @@ bool IsFastMoving()
     return GetG1() == 1 && GetG0() == 0;
 }
  
-int Seek()
-{
-    int i = 0
-    while(!IsFastMoving())
-    {
-        sleep(1); //ensure cpu doesn't turn into a toaster while waiting
-        i++
-    }
-    return i;
-}
+
 
 int GetWelderCurrent(int CurrentOldTimeStamp, int CurrentOld, int *DropCount){
 	get TimeStampNew
@@ -40,8 +31,8 @@ void main()
     int i = 0;
     ftime elapsed;
     
-    PrompCNCSpeed();
-    Seek(); 
+    PromptCNCSpeed();
+	
     
     StopCNCMovement();
    
