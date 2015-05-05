@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <windows.h>
 
 #ifndef _LINUX
 #include "826api.h"
@@ -29,8 +30,8 @@ int main(void)
 	uint diochan1 = 23;
 	uint diochan2 = 22;
 	uint diostates[2];
-	uint diomask1[] = DIOMASK(DIO(diochan1));
-	uint diomask2[] = DIOMASK(DIO(diochan2));
+	uint diomask1[2] = DIOMASK(DIO(diochan1));
+	uint diomask2[2] = DIOMASK(DIO(diochan2));
 	int errcode = S826_ERR_OK;
 	int boardflags = S826_SystemOpen();
 	int k = 1;
@@ -38,11 +39,17 @@ int main(void)
 
 	while (k == 1){
 	
-	S826_DioOutputWrite(board, diomask1, 2);
-	S826_DioInputRead(board, diostates);
+	S826_DioOutputWrite(board, diomask1, 0);
+
+	Sleep(1000);
+
+	S826_DioOutputWrite(board, diomask1, 1);
+	Sleep(1000);
+
+	//S826_DioInputRead(board, diostates);
 	
 
-	printf("%d \t %d \n", DIOSTATE(diostates, diochan1), DIOSTATE(diostates, diochan2));
+	//printf("%d \t %d \n", DIOSTATE(diostates, diochan1), DIOSTATE(diostates, diochan2));
 	
 	}
 
