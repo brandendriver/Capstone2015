@@ -13293,12 +13293,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <connects>
 <connect gate="G$1" pin="+" pad="COIL+"/>
 <connect gate="G$1" pin="-" pad="COIL-"/>
-<connect gate="G$2" pin="O" pad="NO1"/>
+<connect gate="G$2" pin="O" pad="NC1"/>
 <connect gate="G$2" pin="P" pad="COM1"/>
-<connect gate="G$2" pin="S" pad="NC1"/>
-<connect gate="G$3" pin="O" pad="NO2"/>
+<connect gate="G$2" pin="S" pad="NO1"/>
+<connect gate="G$3" pin="O" pad="NC2"/>
 <connect gate="G$3" pin="P" pad="COM2"/>
-<connect gate="G$3" pin="S" pad="NC2"/>
+<connect gate="G$3" pin="S" pad="NO2"/>
 </connects>
 <technologies>
 <technology name=""/>

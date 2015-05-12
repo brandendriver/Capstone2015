@@ -1650,11 +1650,9 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$2">
 <contactref element="U$2" pad="2"/>
-<contactref element="RL1" pad="NC1"/>
-<wire x1="71.12" y1="24.13" x2="71.12" y2="17.78" width="0.8128" layer="16"/>
-<wire x1="71.12" y1="17.78" x2="69.85" y2="16.51" width="0.8128" layer="16"/>
-<wire x1="69.85" y1="16.51" x2="59.9948" y2="16.51" width="0.8128" layer="16"/>
-<wire x1="59.9948" y1="16.51" x2="59.69" y2="16.8148" width="0.8128" layer="16"/>
+<contactref element="RL1" pad="NO1"/>
+<wire x1="59.69" y1="21.336" x2="68.326" y2="21.336" width="0.8128" layer="16"/>
+<wire x1="68.326" y1="21.336" x2="71.12" y2="24.13" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$5">
 <contactref element="U$2" pad="1"/>
