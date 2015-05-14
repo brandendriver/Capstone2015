@@ -25,11 +25,12 @@ int main(void){
 			}
 			S826_TimestampRead(board, *TimestampNew);
 			T1 = TimestampNew - TimestampOld
-			}
-			AvgPeaks(Peaks, T1); //includes print function
-			Runtime = Runtime + T1
-			T1 = 0
-			
 		}
+		AvgPeaks(Peaks, T1); //includes print function
+		Runtime = Runtime + T1
+		TimestampOld = TimestampNew
+		T1 = 0
+			
+	}
 	Return 0;	
 }

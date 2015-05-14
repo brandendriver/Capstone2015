@@ -1,0 +1,18 @@
+﻿Build started 5/12/2015 12:31:36 AM.
+     1>Project "C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\3DP_Controller\3DP_Controller\3DP_Controller.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt 3DP_Controller.c
+         3DP_Controller.c
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\3dp_controller\3dp_controller\3dp_controller.c(40): warning C4101: 'i' : unreferenced local variable
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\3dp_controller\3dp_controller\3dp_controller.c(82): warning C4244: '=' : conversion from 'uint64_t' to 'uint', possible loss of data
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\3dp_controller\3dp_controller\3dp_controller.c(93): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\3dp_controller\3dp_controller\3dp_controller.c(102): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\3dp_controller\3dp_controller\3dp_controller.c(132): warning C4101: 'TimeStampOld' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\3DP_Controller\Debug\3DP_Controller.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\a\Documents\GitHub\Capstone2015\Software\s826_3.3.5\api\x32 C:\Users\a\Documents\GitHub\Capstone2015\Software\s826_3.3.5\api\x32\s826.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\3DP_Controller\Debug\3DP_Controller.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\3DP_Controller\Debug\3DP_Controller.lib" /MACHINE:X86 Debug\3DP_Controller.obj
+         3DP_Controller.vcxproj -> C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\3DP_Controller\Debug\3DP_Controller.exe
+     1>Done Building Project "C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\3DP_Controller\3DP_Controller\3DP_Controller.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.77
