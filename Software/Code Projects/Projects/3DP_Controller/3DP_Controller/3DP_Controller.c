@@ -105,6 +105,7 @@ static int PwmGeneratorStop(uint board, uint counter)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //              Functions below this point were written by the 2015 capstone group.                       //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 static int ElapsedTime(uint board, uint TimeStampOld, uint *time){		//takes board number, a time stamp from main, and a pointer to a time value in main, checks for time overflow and returns an elapsed time.
 	uint64_t Tmax = 4294967296;			//maximum time of the 826 on-board clock in microseconds
 	uint TimeStampNew;					//init a local timestamp to compare with
@@ -131,7 +132,7 @@ static int WireSpeed(uint brd){
 	S826_CounterSnapshotRead(brd, chan, &val, &timestamp, &reason, tmax); //Obtain a snapshot of what the counts buffer has after tmax time
 
 	double pi = 3.1415;
-	float numerator = val * 2 * pi * rad;									// calculate the numerator value for linear velocity
+	float numerator = val * pi * rad;									// calculate the numerator value for linear velocity
 	int fullrotation = 500;												// nuber of counts in a full rotation of the encoder
 	float lin = numerator / fullrotation;									// calculates the linear velocity of wirefeed in inches/second
 	printf("Wire Feed = %.2f in/sec\t\n", lin);									// display the current linear velocity, should update every second.
@@ -213,9 +214,14 @@ static int DropletSpacing(uint board, uint RunTime, uint *TimeStampOld, uint *Pe
 */
 
 /* finish testing degrees to pulse rotations before uncommenting
-static int SetWireSpeed(uint board, uint WireSetting){
+static int SetWireSpeed(uint board, int WireSetting){
 	uint counter = 5;
 	uint TimeStampOld;
+	int direction = 0;
+
+	if (WireSetting < 0){
+	direction = 0;
+	}
 
 	S826_DioOutputSourceWrite(board, diomask1);  // route counter's ExtOut signal to dio pin
 

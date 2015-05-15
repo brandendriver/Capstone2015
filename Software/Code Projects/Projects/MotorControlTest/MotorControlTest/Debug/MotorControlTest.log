@@ -1,0 +1,15 @@
+﻿Build started 5/6/2015 10:42:35 PM.
+     1>Project "C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\MotorControlTest\MotorControlTest\MotorControlTest.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt MotorControl.C
+         MotorControl.C
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\motorcontroltest\motorcontroltest\motorcontrol.c(56): warning C4244: '=' : conversion from 'uint64_t' to 'uint', possible loss of data
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\motorcontroltest\motorcontroltest\motorcontrol.c(63): warning C4716: 'ElapsedTime' : must return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\MotorControlTest\Debug\MotorControlTest.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\a\Documents\GitHub\Capstone2015\Software\s826_3.3.5\api\x32 C:\Users\a\Documents\GitHub\Capstone2015\Software\s826_3.3.5\api\x32\s826.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\MotorControlTest\Debug\MotorControlTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\MotorControlTest\Debug\MotorControlTest.lib" /MACHINE:X86 Debug\MotorControl.obj
+         MotorControlTest.vcxproj -> C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\MotorControlTest\Debug\MotorControlTest.exe
+     1>Done Building Project "C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\MotorControlTest\MotorControlTest\MotorControlTest.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.13

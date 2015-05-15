@@ -73,17 +73,17 @@ static int AnalogVal_Chan0(uint board, double *AdcVal)
 	return errcode;
 }
 
-static int ElapsedTime(uint board, uint TimeStampOld, uint *time){
-	uint64_t Tmax = 4294967296;
-	uint TimeStampNew;
+static int ElapsedTime(uint board, uint TimeStampOld, uint *time){		//takes board number, a time stamp from main, and a pointer to a time value in main, checks for time overflow and returns an elapsed time.
+	uint64_t Tmax = 4294967296;			//maximum time of the 826 on-board clock in microseconds
+	uint TimeStampNew;					//init a local timestamp to compare with
 
-	S826_TimestampRead(board, &TimeStampNew);
-	if (TimeStampOld > TimeStampNew){
-		*time = Tmax - TimeStampOld + TimeStampNew;
+	S826_TimestampRead(board, &TimeStampNew);	//get a new time stamp for the comparison
+	if (TimeStampOld > TimeStampNew){		//check for time overflow
+		*time = Tmax - TimeStampOld + TimeStampNew;		//difference in time calculation if there is a clock overflow
 	}
 	else{
-		*time = (TimeStampNew - TimeStampOld); // / 1000;
-		//printf("time is: %u", time);
+		*time = (TimeStampNew - TimeStampOld); // / 1000;		//difference in time calculation
+
 	}
 
 }
@@ -91,7 +91,7 @@ static int ElapsedTime(uint board, uint TimeStampOld, uint *time){
 static int WireSpeed(uint brd){
 	
 	float rad = .975;															//radius of wheel attached to the encoder in inches
-	int tmax = 1000;											// max interval time in microseconds, this will wait until event edge event is detected
+	int tmax = 1000000;											// max interval time in microseconds, this will wait until event edge event is detected
 	uint val = 0;
 	uint timestamp, reason;
 	uint chan = 0;
@@ -99,24 +99,16 @@ static int WireSpeed(uint brd){
 	S826_CounterSnapshotRead(brd, chan, &val, &timestamp, &reason, tmax); //Obtain a snapshot of what the counts buffer has after tmax time
 
 	double pi = 3.1415;
-	float numerator = val * 2 * pi * rad;									// calculate the numerator value for linear velocity
-	int fullrotation = 5000;												// nuber of counts in a full rotation of the encoder
+	float numerator = val  * pi * rad;									// calculate the numerator value for linear velocity
+	int fullrotation = 500;												// nuber of counts in a full rotation of the encoder
 	float lin = numerator / fullrotation;									// calculates the linear velocity of wirefeed in inches/second
-	printf("Wire Feed = %.2f in/sec\t" , lin);									// display the current linear velocity, should update every second.
+	printf("Wire Feed = %.2f in/sec\t\n" , lin);									// display the current linear velocity, should update every second.
 }
 
-static int AveragePeakTime(uint Peaks, uint SampleTime) {
-	float PeakAvg;
-
-	PeakAvg = SampleTime / Peaks;
-	printf("Average Peak Time %u\n", PeakAvg);
-
-
-}
 
 static int CounterIni(uint brd){											//Function for initializing counter in frequency measurement mode
 	uint chan = 0;															// counter channel number
-	uint ctrmode = 0x00008009;												// counter mode
+	uint ctrmode = 0x0000800A;												// counter mode
 	uint PLcount = 0;														// Pre-Load count for resetting the counter after an event
 	uint preload0reg = 0;
 
@@ -137,15 +129,14 @@ static int CounterIni(uint brd){											//Function for initializing counter i
 int main(void)
 {
 	uint brd = 0;                        // change this if you want to use other than board number 0
-	uint TimeStampOld;
-	uint time = 0;
-	uint RunTime = 0;
-	uint Peaks = 0;
-	uint PeakAvg;
-	uint diochan1 = 23;
-	uint diomask1[] = DIOMASK(DIO(diochan1));
-	double AdcValOld = 0;
-	double AdcValNew = 0;
+	uint TimeStampOld;					//this is for calculating the elapsed time of a sampling cycle
+	uint time = 0;						// this is the elapsed time of a sampling cycle
+	uint RunTime = 0;					// Calculated total runtime of the below loop
+	uint Peaks = 0;						// number of peaks counted in the loop
+	uint diochan1 = 23;					//setting the channel for digital out
+	uint diomask1[] = DIOMASK(DIO(diochan1));		//masking the channel of our digital out
+	double AdcValOld = 0;		//first measured value from ADC. Measured off of the current sensor.
+	double AdcValNew = 0;		//second measured value from ADC. Compared against AdcValOld to check for peaks
 
 
 	
@@ -162,45 +153,46 @@ int main(void)
 	else
 	{
 		
-		CounterIni(brd);
+		CounterIni(brd);		//initialize the counter in frequency measurement mode
 
-		while (RunTime < 300000000){
+		//while (RunTime < 4000000){							//check if runtime is less than an arbitrary runtime in microseconds
 			//WireSpeed(brd);									//measure and display wirespeed
 			uint TimeStampNew = 0;
 			S826_TimestampRead(brd, &TimeStampOld);				//gets time stamp at beginning of program
-		
-
-
-			while(time <= 100000){
+			//S826_DioOutputWrite(brd, diomask1, 1);		//set the DIO pin to high to see the start of a sample on Oscilloscope
+			while(time <= 4000000){
 				
-				AnalogVal_Chan0(brd, &AdcValNew);
-				S826_DioOutputWrite(brd, diomask1, 0);
-				float Threshold = 1;
+				AnalogVal_Chan0(brd, &AdcValNew);		//get a new analog value from the onboard ADC, returns value in volts
 				
-				if (AdcValNew > Threshold){
+				float Threshold = 6.5;						//the threshold for considering it a "peak" is 1v
+				
+				if (AdcValNew > Threshold){			//check if the new value is larger than the threshold
 					do{
-						AnalogVal_Chan0(brd, &AdcValNew);
+						AnalogVal_Chan0(brd, &AdcValNew);		//continue getting new analog values as long as they're greater than the threshold
 
 					} while (AdcValNew > Threshold);
-					Peaks++;
+					Peaks++;			// increment the peaks count, because all previously seen values were one single peak
 				}
-				ElapsedTime(brd, TimeStampOld, &time);
-			}
 
-			S826_DioOutputWrite(brd, diomask1, 1);
+				ElapsedTime(brd, TimeStampOld, &time);		//check the elapsed time against the original timestamp
+				//printf("%u\n", time);
 			
-
-			if (Peaks != 0){
-				printf("Average Peak Time %u\t", time / Peaks);
-				printf("Number of Peaks %u\t", Peaks);
 			}
-			else{
+			WireSpeed(brd);
+			//S826_DioOutputWrite(brd, diomask1, 0);		//set the DIO pin to low to see the end of a sample on the Oscilloscope
+			Sleep(1000);
+
+			if (Peaks != 0){		//check if the system saw a peak
+				printf("Average Peak Time %u\t", time / Peaks);		//calculate and print the average peak time
+				printf("Number of Peaks %u\t\n", Peaks);		//print the number of peaks seen
+			}
+			else{	
 				printf("No peaks detected\n");
 			}
-			RunTime = RunTime + time;
-			time = 0;
-			Peaks = 0;
-		}
+			RunTime = RunTime + time;		//calculate the total runtime
+			time = 0;		//reset the sample time
+			Peaks = 0;		//reset the number of peaks seen
+	//}
 		
 	
 
@@ -232,4 +224,3 @@ int main(void)
 	S826_SystemClose();
 	return 0;
 }
-
