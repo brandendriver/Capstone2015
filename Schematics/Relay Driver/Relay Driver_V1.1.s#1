@@ -13928,12 +13928,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <package name="FRL-264">
 <pad name="COIL-" x="0" y="0" drill="2.8"/>
 <pad name="COIL+" x="0" y="13.97" drill="2.8"/>
-<pad name="COM2" x="6.604" y="2.54" drill="2.8"/>
-<pad name="NO1" x="12.954" y="11.43" drill="2.8"/>
-<pad name="COM1" x="6.604" y="11.43" drill="2.8"/>
-<pad name="NO2" x="12.954" y="2.54" drill="2.8"/>
-<pad name="NC1" x="17.4752" y="11.43" drill="2.8"/>
-<pad name="NC2" x="17.4752" y="2.54" drill="2.8"/>
+<pad name="COM2" x="6.604" y="2.032" drill="2.8"/>
+<pad name="NO1" x="12.954" y="11.938" drill="2.8"/>
+<pad name="COM1" x="6.604" y="11.938" drill="2.8"/>
+<pad name="NO2" x="12.954" y="2.032" drill="2.8"/>
+<pad name="NC1" x="17.4752" y="11.938" drill="2.8"/>
+<pad name="NC2" x="17.4752" y="2.032" drill="2.8"/>
 <wire x1="-4.064" y1="-5.08" x2="-4.064" y2="17.78" width="0.127" layer="21"/>
 <wire x1="-4.064" y1="17.78" x2="22.86" y2="17.78" width="0.127" layer="21"/>
 <wire x1="-4.064" y1="-5.08" x2="22.86" y2="-5.08" width="0.127" layer="21"/>
