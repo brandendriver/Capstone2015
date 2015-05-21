@@ -1,15 +1,24 @@
-﻿Build started 5/14/2015 6:46:56 PM.
+﻿Build started 5/17/2015 5:53:57 PM.
      1>Project "C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\Wire Speed Droplet Spacing Test\Wire Speed Droplet Spacing Test\Wire Speed Droplet Spacing Test.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt WireFeedDropletSpacingTest.c
          WireFeedDropletSpacingTest.c
-     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(40): warning C4101: 'i' : unreferenced local variable
-     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(82): warning C4244: '=' : conversion from 'uint64_t' to 'uint', possible loss of data
-     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(93): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(102): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(121): warning C4716: 'CounterIni' : must return a value
-     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(89): warning C4716: 'ElapsedTime' : must return a value
-     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(106): warning C4716: 'WireSpeed' : must return a value
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(49): warning C4101: 'i' : unreferenced local variable
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(91): warning C4244: '=' : conversion from 'uint64_t' to 'uint', possible loss of data
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(102): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(111): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(163): warning C4013: 'Estop' undefined; assuming extern returning int
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(165): warning C4013: 'ErrorDecode' undefined; assuming extern returning int
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(212): warning C4047: 'function' : 'uint *' differs in levels of indirection from 'uint (*)[2]'
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(212): warning C4024: 'GetAndUpdateG0G1' : different types for formal and actual parameter 2
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(212): warning C4024: 'GetAndUpdateG0G1' : different types for formal and actual parameter 3
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(254): warning C4047: 'function' : 'uint *' differs in levels of indirection from 'uint (*)[2]'
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(254): warning C4024: 'GetAndUpdateG0G1' : different types for formal and actual parameter 2
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(254): warning C4024: 'GetAndUpdateG0G1' : different types for formal and actual parameter 3
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(130): warning C4716: 'CounterIni' : must return a value
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(155): warning C4716: 'GetAndUpdateG0G1' : must return a value
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(98): warning C4716: 'ElapsedTime' : must return a value
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\wire speed droplet spacing test\wire speed droplet spacing test\wirefeeddropletspacingtest.c(115): warning C4716: 'WireSpeed' : must return a value
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\Wire Speed Droplet Spacing Test\Debug\Wire Speed Droplet Spacing Test.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\a\Documents\Capstone2015\Software\s826_3.3.5\api\x32 C:\Users\a\Documents\GitHub\Capstone2015\Software\s826_3.3.5\api\x32\s826.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\Wire Speed Droplet Spacing Test\Debug\Wire Speed Droplet Spacing Test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\Wire Speed Droplet Spacing Test\Debug\Wire Speed Droplet Spacing Test.lib" /MACHINE:X86 Debug\WireFeedDropletSpacingTest.obj
          Wire Speed Droplet Spacing Test.vcxproj -> C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\Wire Speed Droplet Spacing Test\Debug\Wire Speed Droplet Spacing Test.exe
@@ -17,4 +26,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.58
+Time Elapsed 00:00:05.19

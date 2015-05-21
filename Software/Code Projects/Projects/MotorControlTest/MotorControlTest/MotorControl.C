@@ -1,17 +1,3 @@
-//This program is free software : you can redistribute it and / or modify
-//it under the terms of the GNU General Public License as published by
-//the Free Software Foundation, either version 3 of the License, or
-//(at your option) any later version.
-//
-//This program is distributed in the hope that it will be useful,
-//but WITHOUT ANY WARRANTY; without even the implied warranty of
-//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
-//GNU General Public License for more details.
-//
-//You should have received a copy of the GNU General Public License
-//along with this program.If not, see <http://www.gnu.org/licenses/>.
-//////////////////////////////////////////////////////////////////////////
-
 #ifndef _LINUX
 #include <windows.h>
 #include <conio.h>
@@ -34,6 +20,12 @@
 #define DIO(C)                  ((uint64)1 << (C))                          // convert dio channel number to uint64 bit mask
 #define DIOMASK(N)              {(uint)(N) & 0xFFFFFF, (uint)((N) >> 24)}   // convert uint64 bit mask to uint[2] array
 #define DIOSTATE(STATES,CHAN)   ((STATES[CHAN / 24] >> (CHAN % 24)) & 1)    // extract dio channel's boolean state from uint[2] array
+
+#define G1G0inputmask 0x000C0000
+#define G1G0outputmask 0x00030000
+#define DirectionMask 0x00400000
+#define WireSpeedHomeMask 0x00100000
+#define PulseMask 0x00200000
 
 // PWM GENERATOR -----------------------
 
@@ -80,7 +72,9 @@ static int ElapsedTime(uint board, uint TimeStampOld, uint *time){
 int main(void){
 	uint brd = 0;                        // change this if you want to use other than board number 0
 	uint diochan1 = 21;					//initialize our DIO channel
+	uint diochan2 = 22;
 	uint diomask1[] = DIOMASK(DIO(diochan1));		//mask the DIO channel
+	uint diomask2[] = DIOMASK(DIO(diochan2));
 	uint counter = 5;		//initialize counter channel variable
 	int k = 1;		//infinite loop variable
 	uint TimeStampOld = 0;		//initialize timestamp
@@ -99,9 +93,14 @@ int main(void){
 	//////////////////////////////////////////////////////////////////////////////////
 	else
 	{
-		S826_DioOutputSourceWrite(brd, diomask1);  // route counter's ExtOut signal to dio pin
-		while (k = 1){				//begin infinte loop for testing
 		
+		
+		S826_DioOutputSourceWrite(brd, diomask1);  // route counter's ExtOut signal to dio pin
+		while (k == 1){				//begin infinte loop for testing
+
+			S826_DioOutputWrite(brd, diomask2, 1);
+			S826_DioOutputWrite(brd, diomask2, 2);
+			
 			PwmGeneratorStart(brd, counter, 500, 500);  // start pwm generator with 300ms/700ms on/off times
 			S826_TimestampRead(brd, &TimeStampOld);		// get initial timestamp for the start of the loop
 	
@@ -113,10 +112,44 @@ int main(void){
 			}
 		PwmGeneratorStop(brd, counter);	//stop the pwm generator
 		Sleep(1000);	//short sleep cycle as a delay
-		
-	
+		time = 0;
+
+		S826_DioOutputWrite(brd, diomask2, 1);
+		PwmGeneratorStart(brd, counter, 500, 500);  // start pwm generator with 300ms/700ms on/off times
+		S826_TimestampRead(brd, &TimeStampOld);		// get initial timestamp for the start of the loop
+
+		ElapsedTime(brd, TimeStampOld, &time);		//Check the elapsed time in the loop
+		while (time <= 800000){		//begin loop as long as elapsed time is less than 800ms
+
+			ElapsedTime(brd, TimeStampOld, &time);		//check the elapsed time once more
+			printf("time is: %u\n", time);		//print the elapsed time
+		}
+		PwmGeneratorStop(brd, counter);	//stop the pwm generator
+		Sleep(1000);	//short sleep cycle as a delay
+		time = 0;
 		
 	}
+		/*
+		uint pinstate[2];
+		uint direction[2] = { DirectionMask, 0 };
+		uint PulsePin[2] = { PulseMask, 0 };
+
+		S826_DioInputRead(brd, pinstate);
+		pinstate[0] &= WireSpeedHomeMask;
+		S826_DioOutputSourceWrite(brd, PulsePin);
+
+		if (pinstate[0] != 0x100000){
+			S826_DioOutputWrite(brd, direction, 1);
+			S826_DioOutputWrite(brd, direction, 2);
+			PwmGeneratorStart(brd, counter, 5000, 5000);
+			while (pinstate[0] != 0x100000){
+				S826_DioInputRead(brd, pinstate);
+				pinstate[0] &= WireSpeedHomeMask;
+			}
+			PwmGeneratorStop(brd, counter);
+		}
+
+		*/
 		
 	}
 

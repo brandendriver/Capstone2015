@@ -1,17 +1,3 @@
-//This program is free software : you can redistribute it and / or modify
-//it under the terms of the GNU General Public License as published by
-//the Free Software Foundation, either version 3 of the License, or
-//(at your option) any later version.
-//
-//This program is distributed in the hope that it will be useful,
-//but WITHOUT ANY WARRANTY; without even the implied warranty of
-//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
-//GNU General Public License for more details.
-//
-//You should have received a copy of the GNU General Public License
-//along with this program.If not, see <http://www.gnu.org/licenses/>.
-//////////////////////////////////////////////////////////////////////////
-
 #ifndef _LINUX
 #include <windows.h>
 #include <conio.h>
@@ -33,6 +19,15 @@
 #define DIO(C)                  ((uint64)1 << (C))                          // convert dio channel number to uint64 bit mask
 #define DIOMASK(N)              {(uint)(N) & 0xFFFFFF, (uint)((N) >> 24)}   // convert uint64 bit mask to uint[2] array
 #define DIOSTATE(STATES,CHAN)   ((STATES[CHAN / 24] >> (CHAN % 24)) & 1)    // extract dio channel's boolean state from uint[2] array
+
+#define G1G0inputmask 0x000C0000
+#define G1G0outputmask 0x00030000
+#define DirectionMask 0x00400000
+#define WireSpeedHomeMask 0x00100000
+#define PulseMask 0x00200000
+#define MaxTurn 4222180
+#define HomeOffset 1.1
+#define PWMTimeConstant 88888
 
 
 #define X826(FUNC)   if ((errcode = FUNC) != S826_ERR_OK) { printf("\nERROR: %d\n", errcode); return errcode;}
@@ -133,6 +128,45 @@ static int CounterIni(uint brd){											//Function for initializing counter i
 	S826_CounterStateWrite(brd, chan, 1);								//Activate counter
 
 }
+//takes board number, and pointers to two different dio state arrays, returns masked values of both arrays for manipulation in main.
+static int GetAndUpdateG0G1(uint brd, uint *diostatesA, uint *diostatesB, int PrintError){
+	uint diostatesB_Mask[2] = { G1G0outputmask, 0 };
+	uint diostatesComp[2];
+
+	S826_DioInputRead(brd, diostatesA);	//read the digital input states
+	diostatesA[0] &= G1G0inputmask;  //masking to the first two bits of the 3rd byte (channels 19 & 18)
+
+	diostatesComp[0] = (~diostatesA[0] >> 2);		//bitshift right by two bits
+
+	S826_DioOutputRead(brd, diostatesB);		//read the digital out states
+	diostatesB[0] &= G1G0outputmask;		//mask off the last two bits of the 3rd byte (channels 17 & 16)
+
+	if ((diostatesB[0] != diostatesComp[0])){	//check if SHIFTED input dio is the same as current output dio
+		S826_DioOutputWrite(brd, diostatesB_Mask, 1);
+		S826_DioOutputWrite(brd, diostatesComp, 2);		//if it's not, write the SHIFTED input to output
+
+	}
+	if (diostatesA[0] == 0xC0000); {	//check if G0G1 are in unrecognized states, i.e. 11
+		//Estop();		//Stop CNC machine AND welder
+		PrintError = 0;		//Set the error code for unrecognized states
+		//ErrorDecode(PrintError);		//decode the error and halt program
+	}
+
+}
+
+static int GetInputG0G1(uint brd, uint *diostatesA, int PrintError){
+
+	S826_DioInputRead(brd, diostatesA);	//read the digital input states
+	diostatesA[0] &= G1G0inputmask;  //masking to the first two bits of the 3rd byte (channels 19 & 18)
+
+	if (diostatesA[0] == 0xC0000); {	//check if G0G1 are in unrecognized states, i.e. 11
+		Estop();		//Stop CNC machine AND welder
+		PrintError = 0;		//Set the error code for unrecognized states
+		ErrorDecode(PrintError);		//decode the error and halt program
+	}
+
+}
+
 
 //void delay(int milliseconds);
 
@@ -151,6 +185,9 @@ int main(void)
 	uint diomask1[] = DIOMASK(DIO(diochan1));		//masking the channel of our digital out
 	double AdcValOld = 0;		//first measured value from ADC. Measured off of the current sensor.
 	double AdcValNew = 0;		//second measured value from ADC. Compared against AdcValOld to check for peaks
+	uint InputStates[2] = { 0, 0 };
+	uint OutputStates[2] = { 0, 0 };
+	uint PrintError = 0;
 
 
 	
@@ -169,7 +206,13 @@ int main(void)
 		
 		CounterIni(brd);		//initialize the counter in frequency measurement mode
 
-		//while (RunTime < 4000000){							//check if runtime is less than an arbitrary runtime in microseconds
+		while (1){	//check if runtime is less than an arbitrary runtime in microseconds
+
+			while (InputStates[0] != 0x40000){
+			GetAndUpdateG0G1(brd, &InputStates, &OutputStates, PrintError);
+			
+			}
+
 			//WireSpeed(brd);									//measure and display wirespeed
 			uint TimeStampNew = 0;
 			S826_TimestampRead(brd, &TimeStampOld);				//gets time stamp at beginning of program
@@ -206,7 +249,11 @@ int main(void)
 			RunTime = RunTime + time;		//calculate the total runtime
 			time = 0;		//reset the sample time
 			Peaks = 0;		//reset the number of peaks seen
-	//}
+
+			while (InputStates[0] != 0x80000){
+				GetAndUpdateG0G1(brd, &InputStates, &OutputStates, PrintError);
+			}
+	}
 		
 	
 
