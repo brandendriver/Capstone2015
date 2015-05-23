@@ -15,7 +15,7 @@ Function Inputs: Board number, a time stamp (taken before entering the function)
 
 Function Outputs/Updates: Updates: the time variable, 
 
-Function Description: The function checks for the overflow of the 826's on-board timestamp generator and calculates the time elapsed between an old time stamp and the time the function is called. It stores the elapsed time in a time variable in microseconds. 
+Function Description: The function checks for the overflow of the 826's on-board time stamp generator and calculates the time elapsed between an old time stamp and the time the function is called. It stores the elapsed time in a time variable in microseconds. 
 */
 
 /*
