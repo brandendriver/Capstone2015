@@ -1,0 +1,141 @@
+/*
+Function Name: Watch Dog Enable
+
+Inputs: Board number
+
+Outputs/Updates: Updates: the watchdog's SafeWrenWrite function
+
+Function Description: By updating the Watchdog's SafeWrenWrite function it enables and starts the watchdog timer so that PWM mode can be utilized.
+*/
+
+/*
+Function Name: Elapsed Time
+
+Function Inputs: Board number, a time stamp (taken before entering the function), pointer to a time variable
+
+Function Outputs/Updates: Updates: the time variable, 
+
+Function Description: The function checks for the overflow of the 826's on-board timestamp generator and calculates the time elapsed between an old time stamp and the time the function is called. It stores the elapsed time in a time variable in microseconds. 
+*/
+
+/*
+Function Name: Wire Speed
+
+Inputs: Board number
+
+Outputs/Updates: Prints wire feed speed
+
+Function Description: The function obtains a snapshot of the counts buffer from the 826, which is attached to the encoder on the wire feed system of the welder. It then calculates the linear velocity of the wire being fed, and prints it to the screen.
+*/
+
+/*
+Function Name: Counter Frequency Ini
+
+Inputs: Board number
+
+Outputs/Updates: Updates:
+
+Function Description: Initializes the channel 0 counter into frequency mode, for use with calculating wire speed.
+*/
+
+/*
+Function Name: Get and update G0/G1
+
+Inputs: Board number, Pointer to an array of DIO Inputs, and Pointer to an array of DIO Outputs
+
+Outputs/Updates: Updates: G1G0 output array, G1G0 input array
+
+Function Description: Reads the current Input G0/G1 states and checks if the current Output G0/G1 states are the same, if not it updates them. The function also error handles to check if the function is in an unrecognised state of both pins high, i.e. 11 and handles the error appropriately.
+*/
+
+/*
+Function Name: Get Input G0/G1
+
+Inputs: Board number, Pointer to an array of DIO Inputs, an error code variable
+
+Outputs/Updates: Updates: G0/G1 Input array
+
+Function Description: Reads and updates the current G0/G1 input states. The function also error handles to check if the function is in an unrecognised state of both pins high, i.e. 11 and handles the error appropriately.
+*/
+
+/*
+Function Name: Halt CNC and Weld
+
+Inputs: Board number
+
+Outputs/Updates: CNC start/stop pin, Welder switching Pin.
+
+Function Description: Outputs a high signal on both the CNC start/stop pin and the Welder Switching pin (NOTE: This is done by forcing the OUTPUT G0/G1 to the state "00" causing the welder trigger to halt unconditionally).
+*/
+
+/*
+Function Name: Error Decode
+
+Inputs: Error Code variable
+
+Outputs/Updates: None
+
+Function Description: Decodes input error code and prints appropriate error description before halting the system and exiting the program.
+*/
+
+/*
+Function Name: Droplet Spacing
+
+Inputs: Board number, Pointer to an array of average time samples, A variable for the type of run the code should be in
+
+Outputs/Updates: Outputs: the spacing between "droplets" Updates: Average Time between droplets variable
+
+Function Description: Using the input "run type" the function runs in one of two modes; Spike Check, and Spike Measurement
+		Spike Check Mode: runs and averages values read from the analog input for only 40 milliseconds to make sure the welder is on and the current sensor is correctly reading by updating a peaks count for values above the threshold for a peak.
+		Spike Measurement Mode: runs and averages values read from the analog input for 500 milliseconds to get a more accurate average of the number of peaks seen in the current.
+*/
+
+/*
+Function Name: Set Wire Speed
+
+Inputs: Board number, Wire Speed Setting
+
+Outputs/Updates: Updates: Turns Wire Speed knob via stepper motor
+
+Function Description: checks to see if the input setting is positive or negative and sets the direction the motor will turn appropriately. The function then uses the input setting value and calculates based on the homing offset how long the motor must turn to reach the requested wire speed setting. Finally it turns the motor for the appropriate amount of time.
+*/
+
+/*
+Function Name: Home Wire Speed
+
+Inputs: Board number
+
+Outputs/Updates: Updates wire speed knob to home position.
+
+Function Description: Turns the wire speed settings stepper motor until the homing switch is reached. This is so that the system will know where the wire speed setting is at any given time. 
+*/
+
+/*
+Function Name: User Prompt
+
+Inputs: Pointer to Wire Speed Setting variable, and Pointer to Nominal Droplet Time Variable
+
+Outputs/Updates: Updates the Wire Speed Setting Variable, Nominal Droplet Time Variable.
+
+Function Description: Asks the user to input the CNC Speed for the print, Function uses the input value to set the wire speed variable and related nominal droplet time variables for use in the main line.
+*/
+
+/*
+Function Name: Get Temp
+
+Inputs: Board number, pointer to a temperature variable
+
+Outputs/Updates: Updates: Temperature variable
+
+Function Description: Function reads from the analog pins associated with the temperature sensor and calculates the current temperature in degrees Celsius before updating the main line Temperature variable.
+*/
+
+/*
+Function Name: Error Calculation
+
+Inputs: Board number, Droplet time variable, Nominal Droplet Time Variable, and a pointer to a Droplet Error Variable.
+
+Outputs/Updates: Updates: Droplet Error variable
+
+Function Description: Function updates the global average droplet error array with the input droplet error, and calculates the percent error between the nominal droplet time and the input droplet time. This is then stored in the main line's Droplet Error variable.
+*/
