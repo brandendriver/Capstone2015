@@ -1,23 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////////////
-/// Copyright (C) yyyy  name of author												///
-///																					///
-/// This program is free software; you can redistribute it and/or					///
-/// modify it under the terms of the GNU General Public License						///
-/// as published by the Free Software Foundation; either version 2					///
-/// of the License, or (at your option) any later version.							///
-///																					///
-/// This program is distributed in the hope that it will be useful,					///
-/// but WITHOUT ANY WARRANTY; without even the implied warranty of					///
-/// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the					///
-/// GNU General Public License for more details.									///
-///																					///
-/// You should have received a copy of the GNU General Public License				///
-/// along with this program; if not, write to the Free Software						///
-/// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.	///
-////////////////////////////////////////////////////////////////////////////////////////
-
-
-
 #ifndef _LINUX
 #include <windows.h>
 #include <conio.h>
@@ -492,11 +472,11 @@ static int HomeWireSpeed(uint brd){
 	pinstate[0] &= WIRESPEEDHOMEMASK;
 	S826_DioOutputSourceWrite(brd, PulsePin);
 
-	if (pinstate[0] != 0x100000){
+	if (pinstate[0] != WIRESPEEDHOMEMASK){
 		S826_DioOutputWrite(brd, direction, 1);
 		S826_DioOutputWrite(brd, direction, 2);
 		PwmGeneratorStart(brd, counter, 5000, 5000);
-		while (pinstate[0] != 0x100000){
+		while (pinstate[0] != WIRESPEEDHOMEMASK){
 			S826_DioInputRead(brd, pinstate);
 			pinstate[0] &= WIRESPEEDHOMEMASK;
 		}
@@ -515,8 +495,8 @@ Function Description: takes an error code of 0,1,2 and prints appropriate error 
 static int UserPrompt(float *WireSpeedSetting, float *NominalDropletTime){
 
 	float CNCSpeed = 0.0;
-	float CNCRelatedToWireSpeed[10] = { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
-	float NominalDroplets[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	float CNCRelatedToWireSpeed[] = { 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4 };
+	float NominalDroplets[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	int a = 0;
 
 	printf("Please input your CNC Speed, Note speed must be between 3 in/s and 6.7 in/s:\n ");
