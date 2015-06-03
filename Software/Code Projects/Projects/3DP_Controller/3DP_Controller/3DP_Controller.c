@@ -213,7 +213,7 @@ Function Description: The function obtains a snapshot of the counts buffer from 
 */
 static void WireSpeed(float *WireSpeed)
 {
-	float rad = 0.975f;		//radius of wheel attached to the encoder in inches
+	float dia = 0.975f;		//radius of wheel attached to the encoder in inches
 	int tmax = 1000000;		// max interval time in microseconds, this will wait until event edge event is detected
 	uint val = 0;
 	uint timestamp, reason;
@@ -222,7 +222,7 @@ static void WireSpeed(float *WireSpeed)
 	S826_CounterSnapshotRead(BRD, chan, &val, &timestamp, &reason, tmax); //Obtain a snapshot of what the counts buffer has after tmax time
 
 	float pi = 3.1415f;
-	float numerator = val * pi * rad;			// calculate the numerator value for linear velocity
+	float numerator = val * pi * dia;			// calculate the numerator value for linear velocity
 	float denominator = COUNTSPERREV * 0.1f;		// SECOND NUMBER IN DENOMINATOR IS ENCODER SAMPLE TIME, IF SAMPLE TIME IS CHANGED IN CounterFrequencyIni FUNCTION, THIS NUMBER NEEDS TO REFLECT THAT CHANGE
 	float lin = numerator / denominator;		// calculates the linear velocity of wirefeed in inches/second
 	*WireSpeed = lin;
@@ -238,7 +238,7 @@ Function Description: Initializes the channel 0 counter into frequency mode, for
 static void CounterFrequencyIni() //Function for initializing counter in frequency measurement mode
 {
 	uint chan = 0;														// counter channel number
-	uint ctrmode = 0x0000800A;											// counter mode, IF SAMPLE TIME IS TO BE CHANGED, ALSO CHANGE DENOMINATOR IN WireSpeed FUNCTION.
+	uint ctrmode = 0x0000800A;											// counter mode, IF SAMPLE TIME IS TO BE CHANGED, ALSO CHANGE DENOMINATOR IN WireSpeed FUNCTION. See register descriptions.
 	uint PLcount = 0;													// Pre-Load count for resetting the counter after an event
 	uint preload0reg = 0;
 
@@ -639,38 +639,36 @@ static void ErrorCalculation(float DropletTime, float *AvgDropletError, float Dr
 int main(void)
 {
 	uint DutyCycleTimeStamp = 0;
-	uint time = 0;						// this is the elapsed time of a sampling cycle
-	uint RunTime = 0;					// Calculated total runtime of the below loop
-	uint Peaks = 0;						// number of peaks counted in the loop
-	uint InputStates[2] = { 0, 0 };
-	uint OutputStates[2];
-	uint Direction;
-	float WireSpeed = 0.0f;
-	float HomeOffset = 0.0f;
+	uint RunTime = 0;														// Calculated total runtime of the below loop
+	uint Peaks = 0;															// number of peaks counted in the loop
+	uint InputStates[2] = { 0, 0 };											// Array to hold the DIO input pinstates
+	uint OutputStates[2];													// Array to hold the DIO output states
 
-	float Temp = 0.0f;
-	float DropletErrors[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	float DropletTime = 0.0f;
-	float InitialWireSpeedSetting = 0.0f;
-	float NominalDropletTime = 0.0f;
-	float AvgDropletError = 0.0f;
-	float AdjustedWireSpeed = 0.0f;
+	float WireSpeed = 0.0f;													// Variable to pass setting if the Wire Speed knob
+	float HomeOffset = 0.0f;												// Initial Wire speed position
+	float Temp = 0.0f;														// Variable for Temperature
+	float DropletErrors[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };				// Array used to calculate average error
+	float DropletTime = 0.0f;												// Variable to hold measured droplet time
+	float InitialWireSpeedSetting = 0.0f;									// Variable to hold inital wre speed
+	float NominalDropletTime = 0.0f;										// Variable to hold nominal droplet time
+	float AvgDropletError = 0.0f;											// Variable to hold average droplet error
+	float AdjustedWireSpeed = 0.0f;											// Variable to hold 
 
-	uint StartCNCMask[2] = {STARTCNCMASK, 0};
+	uint StartCNCMask[2] = {STARTCNCMASK, 0};								// Array to used to change pinstate to turn on and off CNC Machine
 
-	int loop = 0;
-	int PrintError = 0;
+	int loop = 0;															// main loop counter
+	int PrintError = 0;														// Variable for error code
 
-	int errcode = S826_ERR_OK;
-	int boardflags = S826_SystemOpen();        // open 826 driver and find all 826 boards
+	int errcode = S826_ERR_OK;														
+	int boardflags = S826_SystemOpen();      								// open 826 driver and find all 826 boards
 
 	if (boardflags < 0)
 	{
-		errcode = boardflags;                       // problem during open
-	}
+		errcode = boardflags;                      							 // problem during open
+	}						
 	else if ((boardflags & (1 << BRD)) == 0)
 	{
-		printf("TARGET BOARD NOT FOUND\n");         // driver didn't find board you want to use
+		printf("TARGET BOARD NOT FOUND\n");        							 // driver didn't find board you want to use
 	}
 	else
 	{
@@ -678,103 +676,105 @@ int main(void)
 		//                            Main Loop Starts Here                             //
 		//////////////////////////////////////////////////////////////////////////////////
 
-		WatchDogEnable();
-		CounterFrequencyIni();
-		CalibrateWireSpeed(&HomeOffset);								//Calibrate WireSpeed
-		UserPrompt(&InitialWireSpeedSetting, &NominalDropletTime);	// Prompt user for CNC speed and verify that it is a correct speed value.
-		InitialWireSpeedSetting = InitialWireSpeedSetting - HomeOffset;// Home wire speed setting on welder via stepper motor
-		SetWireSpeed(&InitialWireSpeedSetting);			// Set wire speed, which is detemined by both CNC speed and current settings
-		printf("System setup complete, moving on to print.\n\n");
-		Sleep(1000);
+		WatchDogEnable();													// Enable Watchdog for internal signal routing of PWM Generator
+		CounterFrequencyIni();												// Enable Counter as frequency counter
+		CalibrateWireSpeed(&HomeOffset);									// Calibrate WireSpeed
+		UserPrompt(&InitialWireSpeedSetting, &NominalDropletTime);			// Prompt user for CNC speed and verify that it is a correct speed value.
+		InitialWireSpeedSetting = InitialWireSpeedSetting - HomeOffset;		// Home wire speed setting on welder via stepper motor
+		SetWireSpeed(&InitialWireSpeedSetting);								// Set wire speed, which is detemined by both CNC speed and current settings
+		printf("System setup complete, moving on to print.\n\n");			// Confirmation of setting the wirespeed.
+		Sleep(1000);														// Pause for useability
 	
-		//Allow CNC Machine to Move
-		S826_DioOutputWrite(BRD, StartCNCMask, 1);      // Start CNC movement
+		S826_DioOutputWrite(BRD, StartCNCMask, 1);      					// Start CNC movement
 		
-		printf("Waiting for G1\n\n");
-		GetInputG0G1(&InputStates[0], PrintError);
-InitialPosition:
+		printf("\nWaiting for print to start ...\n\n");						// Indicate that machine is ready to 
+		GetInputG0G1(&InputStates[0], PrintError);							// Get current G1G0 state
+InitialPosition:															// Label to jump to for inital loop
 
-		while (InputStates[0] != G1INPUTACTIVE) // Do nothing while G0 = 1 and G1 = 0
+		while (InputStates[0] != G1INPUTACTIVE) 							// Do nothing while G0 = 1 and G1 = 0
 		{
-			GetAndUpdateG0G1(&InputStates[0], &OutputStates[0]);
-			Sleep(1);
+			GetAndUpdateG0G1(&InputStates[0], &OutputStates[0]);			// Check G1G0 state 
+			Sleep(1);														// Short pause to avoid Read/Write timing violation
 		}
-		printf("Found G1\n\n");
-		HaltCncAndWeld();      // When G0 = 0 and G1 = 1, stop CNC movement
+		//printf("Found G1\n\n");											// Confirm that G1 has been sensed. For debugging.
+		HaltCncAndWeld();      												// Halt CNC movement and welder to prepare for temperature read
 
-		GetTemp(&Temp);      // Check that baseplate temperature is above threshold
-		while (Temp > HIGHTEMPTHRESHOLD)
+		GetTemp(&Temp);     												// Measure temperature
+		while (Temp > HIGHTEMPTHRESHOLD)									// When the temp is too hot
 		{
 			////////////////////////////////////////////////////////
 			// Run Torch Routine: This is a manual process for now//
 			////////////////////////////////////////////////////////
-			GetTemp(&Temp);
-			printf("checking temperature, %f\n)", Temp);
+			GetTemp(&Temp);													// Measure temperature
+			printf("Current temperature:, %f\n)", Temp);					// Diaplay Temp
 
 		}
 
-		S826_TimestampRead(BRD, &DutyCycleTimeStamp);    // Get TimeStamp
+		S826_TimestampRead(BRD, &DutyCycleTimeStamp);    					// Get TimeStamp
 		GetAndUpdateG0G1(&InputStates, &OutputStates);      				// Use relay to start welder
-		DropletSpacing(NULL, SPIKECHECK);      			// Read current spikes, If current spikes = 0, ERROR. Stop welder and CNC. Exit Program
+		DropletSpacing(NULL, SPIKECHECK);      								// Read current spikes, If current spikes = 0, ERROR. Stop welder and CNC. Exit Program
 
-		S826_DioOutputWrite(BRD, StartCNCMask, 1);      // Start CNC movement
 
-		//GetTemp(&Temp);
-											// Check if G1 = 1 and G0 = 0. If not so, wait 
+		S826_DioOutputWrite(BRD, StartCNCMask, 1);      					// Start CNC movement
+
 		do
-		{
-			GetAndUpdateG0G1(&InputStates[0], &OutputStates[0]);
-		} while (InputStates[0] != G1INPUTACTIVE);
+		{																	
+			GetAndUpdateG0G1(&InputStates[0], &OutputStates[0]);			// Update G1G0 State
+		} while (InputStates[0] != G1INPUTACTIVE);							// While G1 is not asserted & G0 is asserted
 
-		while (InputStates[0] == G1INPUTACTIVE)
+
+
+
+		while (InputStates[0] == G1INPUTACTIVE)								// While G1 is asserted & G0 is not asserted
 		{
-			DropletSpacing(&DropletTime, SPIKEMEASURE);          // Check droplet spacing
-			///////////////		If spacing is greater than +/- 20%, ERROR. Stop welder and CNC. Exit Program		///////////////	
-			ErrorCalculation(DropletTime, &AvgDropletError, DropletErrors);
-			if (loop >= 10)
-			{
-				if (AvgDropletError >= .6f || AvgDropletError <= -.6f)
+			DropletSpacing(&DropletTime, SPIKEMEASURE);          			// Measure droplet spacing
+
+			ErrorCalculation(DropletTime, &AvgDropletError, DropletErrors);	// Calculate error from nominal droplet spacing
+			if (loop >= 10)													// Wait till average error array fills
+			{																// Once average error array is full
+				if (AvgDropletError >= .6f || AvgDropletError <= -.6f)		// If the error is more or less than +/-60%
 				{
-					HaltCncAndWeld();
-					PrintError = 2;
-					ErrorDecode(PrintError);
+					HaltCncAndWeld();										// Stop the CNC Machine and Welder		
+					PrintError = 2;											// Set error code
+					ErrorDecode(PrintError);								// Display error and end program
 				}
-				///////////////		If spacing is greater than +/- 5%, adjust wire speed control		///////////////	
-				else if (AvgDropletError >= 0.1f || AvgDropletError <= -0.1f)
+				else (AvgDropletError >= 0.1f || AvgDropletError <= -0.1f)	// If Average Error is above or below +/-10%
 				{
-					AdjustedWireSpeed = AvgDropletError * -1;
-					SetWireSpeed(&AdjustedWireSpeed);
+					AdjustedWireSpeed = AvgDropletError * -1;				// Scale and negate value for negative feedback.
+					SetWireSpeed(&AdjustedWireSpeed);						// Adjust the wirespeed, proportional to the error
 
 
 				}
 			}
 
-			ElapsedTime(DutyCycleTimeStamp, &time);          // Read TimeStamp
-			// If loop time is less than 20% of Duty Cycle, check status of G0 and G1 and continue with weld
-			// If loop time is greater than 20% of Duty Cycle, stop welder and CNC. Wait 80% of Duty Cycle
-			if (time > WELDDUTYCYCLE)
+			ElapsedTime(DutyCycleTimeStamp, &time);          				// Read TimeStamp for duty cycle check
+
+			if (time > WELDDUTYCYCLE)										// If welder has been running longer than appropiate duty cycle 
 			{
-				HaltCncAndWeld();
-				time = 0;
-				S826_TimestampRead(BRD, &DutyCycleTimeStamp);
+				HaltCncAndWeld();											// Stop CNC and Welder
+				time = 0;													// Reset Time
+				S826_TimestampRead(BRD, &DutyCycleTimeStamp);				// Read Timestamp
 				printf("Welder has been running for longer than its duty cycle, waiting for cooldown now.\n");
-				while (time < 480000000)
+				while (time < 480000000)									// Wait for the welder cooldown time
 				{
-					ElapsedTime(DutyCycleTimeStamp, &time);
+					ElapsedTime(DutyCycleTimeStamp, &time);					// Calculate elapsed time
 				}
 				printf("Welder has cooled down, checking temperature of weld now before proceeding with print.\n");
-				goto InitialPosition;
+				goto InitialPosition;										// Jump to chek temp and resart CNC Machine
 			}
 
-			GetAndUpdateG0G1(&InputStates[0], &OutputStates[0]);
-			if (InputStates[0] == G0INPUTACTIVE)
+			GetAndUpdateG0G1(&InputStates[0], &OutputStates[0]);			// Check G1G0 state
+			if (InputStates[0] == G0INPUTACTIVE)							// If G0 is asserted and G1 is not asserted
 			{
-				goto InitialPosition;
+				goto InitialPosition;										
 			}
-			loop++;
+			loop++;															// Increment main loop count to
 		}
 		// End Program
 	}
+	//////////////////////////////////////////////////
+	/////////Sensoray error decoding./////////////////
+	//////////////////////////////////////////////////
 	switch (errcode)
 	{
 	case S826_ERR_OK:           break;
@@ -791,6 +791,9 @@ InitialPosition:
 	default:                    printf("Unknown error"); break;
 	}
 
+//////////////////////////////////////////////////////////////////////////
+////////////////////Close system and free up resources////////////////////
+//////////////////////////////////////////////////////////////////////////
 
 #ifndef _LINUX	
 	printf("\nKeypress to exit ...\n\n");
