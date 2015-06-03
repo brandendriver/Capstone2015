@@ -16,7 +16,6 @@
 /// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.	///
 ////////////////////////////////////////////////////////////////////////////////////////
 
-
 #ifndef _LINUX
 #include <windows.h>
 #include <conio.h>
@@ -252,11 +251,11 @@ int main(void)
 
 				ElapsedTime(brd, TimeStampOld, &time);		//check the elapsed time against the original timestamp
 				//printf("%u\n", time);
-			
+				//WireSpeed(brd);
 			}
 			WireSpeed(brd);
 			//S826_DioOutputWrite(brd, diomask1, 0);		//set the DIO pin to low to see the end of a sample on the Oscilloscope
-			Sleep(1000);
+			//Sleep(1000);
 
 			if (Peaks != 0){		//check if the system saw a peak
 				printf("Average Peak Time %u\t", time / Peaks);		//calculate and print the average peak time

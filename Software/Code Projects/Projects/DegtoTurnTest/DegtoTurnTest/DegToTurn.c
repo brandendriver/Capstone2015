@@ -16,7 +16,6 @@
 /// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.	///
 ////////////////////////////////////////////////////////////////////////////////////////
 
-
 #ifndef _LINUX
 #include <windows.h>
 #include <conio.h>
@@ -46,7 +45,7 @@
 #define WireSpeedHomeMask 0x00100000
 #define PulseMask 0x00200000
 #define MaxTurn 4222180
-#define HomeOffset 1.6
+#define HomeOffset 1.1
 #define PWMTimeConstant 88900
 
 // PWM GENERATOR -----------------------
@@ -127,14 +126,14 @@ static int CounterIni(uint brd){											//Function for initializing counter i
 
 }
 
-static int SetWireSpeed(uint brd, double setting){
+static int SetWireSpeed(uint brd, float *setting){
 	uint time = 0;
 	uint TimeStampOld = 0;
 
 
 
-	setting = setting - HomeOffset;
-	uint TimeOn = PWMTimeConstant * setting;
+	*setting = *setting - HomeOffset;
+	uint TimeOn = PWMTimeConstant * *setting;
 
 	PwmGeneratorStart(brd, 500, 500);
 	S826_TimestampRead(brd, &TimeStampOld);		// get initial timestamp for the start of the loop
@@ -274,7 +273,8 @@ int main(void){
 
 
 		//turn motor 10deg
-		SetWireSpeed(brd, 7);
+		float setting = 3.5;
+		SetWireSpeed(brd, &setting);
 
 		/*
 		Sleep(4000);
@@ -299,7 +299,7 @@ int main(void){
 		Sleep(1000);
 
 		//turn welder on
-		//S826_DioOutputWrite(brd, WeldOn, 0);
+	//	S826_DioOutputWrite(brd, WeldOn, 0);
 
 		//Sleep(100);
 		//read encoder

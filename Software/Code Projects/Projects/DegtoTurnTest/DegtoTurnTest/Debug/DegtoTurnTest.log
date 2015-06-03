@@ -1,4 +1,4 @@
-﻿Build started 5/18/2015 9:53:57 PM.
+﻿Build started 5/29/2015 6:10:23 PM.
      1>Project "C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\DegtoTurnTest\DegtoTurnTest\DegtoTurnTest.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt DegToTurn.c
@@ -6,7 +6,8 @@
      1>c:\users\a\documents\github\capstone2015\software\code projects\projects\degtoturntest\degtoturntest\degtoturn.c(70): warning C4244: '=' : conversion from 'uint64_t' to 'uint', possible loss of data
      1>c:\users\a\documents\github\capstone2015\software\code projects\projects\degtoturntest\degtoturntest\degtoturn.c(81): warning C4305: 'initializing' : truncation from 'double' to 'float'
      1>c:\users\a\documents\github\capstone2015\software\code projects\projects\degtoturntest\degtoturntest\degtoturn.c(90): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\degtoturntest\degtoturntest\degtoturn.c(118): warning C4244: 'initializing' : conversion from 'double' to 'uint', possible loss of data
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\degtoturntest\degtoturntest\degtoturn.c(117): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\a\documents\github\capstone2015\software\code projects\projects\degtoturntest\degtoturntest\degtoturn.c(118): warning C4244: 'initializing' : conversion from 'float' to 'uint', possible loss of data
      1>c:\users\a\documents\github\capstone2015\software\code projects\projects\degtoturntest\degtoturntest\degtoturn.c(164): warning C4013: 'Estop' undefined; assuming extern returning int
      1>c:\users\a\documents\github\capstone2015\software\code projects\projects\degtoturntest\degtoturntest\degtoturn.c(166): warning C4013: 'ErrorDecode' undefined; assuming extern returning int
      1>c:\users\a\documents\github\capstone2015\software\code projects\projects\degtoturntest\degtoturntest\degtoturn.c(226): warning C4020: 'PwmGeneratorStart' : too many actual parameters
@@ -21,4 +22,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.88
+Time Elapsed 00:00:06.99

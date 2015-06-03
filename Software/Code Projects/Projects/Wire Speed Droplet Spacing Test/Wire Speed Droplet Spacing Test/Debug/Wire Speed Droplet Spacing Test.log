@@ -1,4 +1,4 @@
-﻿Build started 5/17/2015 5:53:57 PM.
+﻿Build started 5/22/2015 7:50:29 PM.
      1>Project "C:\Users\a\Documents\GitHub\Capstone2015\Software\Code Projects\Projects\Wire Speed Droplet Spacing Test\Wire Speed Droplet Spacing Test\Wire Speed Droplet Spacing Test.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt WireFeedDropletSpacingTest.c
@@ -26,4 +26,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.19
+Time Elapsed 00:00:11.90
