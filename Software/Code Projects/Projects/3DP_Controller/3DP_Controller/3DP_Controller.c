@@ -768,7 +768,7 @@ InitialPosition:															// Label to jump to for inital loop
 			{
 				goto InitialPosition;										
 			}
-			loop++;															// Increment main loop count to
+			loop++;															// Increment main loop count
 		}
 		// End Program
 	}
