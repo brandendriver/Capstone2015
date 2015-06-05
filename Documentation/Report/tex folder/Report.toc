@@ -31,10 +31,9 @@
 \contentsline {subsection}{\numberline {6.2}Wire Feed Test}{37}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Weld Quality Test}{39}{subsection.6.3}
 \contentsline {section}{\numberline {7}Photos and Videos of Progress}{48}{section.7}
-\contentsline {section}{\numberline {8}Bill of Materials (BOM)}{56}{section.8}
-\contentsline {section}{Appendix A}{58}{section*.4}
-\contentsline {section}{Appendix B}{68}{section*.5}
-\contentsline {section}{Appendix C}{145}{section*.6}
-\contentsline {section}{Appendix D}{795}{section*.7}
-\contentsline {section}{Appendix E}{797}{section*.8}
-\contentsline {section}{Appendix F}{814}{section*.9}
+\contentsline {section}{\numberline {8}Bill of Materials (BOM)}{57}{section.8}
+\contentsline {section}{Appendix A}{59}{section*.4}
+\contentsline {section}{Appendix B}{69}{section*.5}
+\contentsline {section}{Appendix C}{70}{section*.6}
+\contentsline {section}{Appendix D}{70}{section*.7}
+\contentsline {section}{Appendix E}{70}{section*.8}
