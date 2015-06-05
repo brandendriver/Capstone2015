@@ -1052,9 +1052,21 @@ GTK+ has a comprehensive collection of core widgets and interfaces for use in yo
 \section{Testing}
 \indent Testing was a constant part of this project. Many of the tests were small trouble shooting sessions where we would work on getting a specific piece of hardware or software to work. There were also several tests that were done more methodically, due to their importance of the final outcome. Some of these tests, with their test plans and results, can be seen below.
 
-\subsection{Wire Speed Test Results}
+\subsection{CNC Confirmation Test}
 
-\includepdf[pages={-}]{tp1.pdf}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.95]{TP1}
+\end{figure}
+
+\clearpage
+
+\subsection{Wire Feed Test}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{tp-4}
+\end{figure}
 
 \clearpage
 
@@ -1088,23 +1100,27 @@ GTK+ has a comprehensive collection of core widgets and interfaces for use in yo
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.95]{speedplot}
-\caption{Proposed Rough GUI Layout}
+\caption{Wire Speed Test Results}
 \end{figure}
 
 \clearpage
 
 
+\subsection{Weld Quality Test}
 
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.9]{tp-5-1}
+\end{figure}
 
-
-\includepdf[pages={-}]{tp4.pdf}
-
-\includepdf[pages={-}]{tp5.pdf}
 
 \clearpage
 
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.9]{tp-5-2}
+\end{figure}
 
-\subsection{Weld Quality Test Results}
 
 \begin{center}
 
@@ -1113,7 +1129,7 @@ GTK+ has a comprehensive collection of core widgets and interfaces for use in yo
 
 
   \hline
-  \textbf{Wire Speed (in/s)} & \textbf{CNC Speed (in/min)} & \textbf{Avg Droplet Spacing (us)} \\ \hline
+  \textbf{Wire Speed (in/s)} & \textbf{CNC Speed (in/min)} & \textbf{Avg Droplet Spacing (\textmu s)} \\ \hline
 4.21	& 2 &	19047 \\ \hline
 4.04 &	3 &	20619 \\ \hline
 3.88 &	4 &	22857 \\ \hline
@@ -1141,7 +1157,29 @@ GTK+ has a comprehensive collection of core widgets and interfaces for use in yo
 10 &	5 &	11765 \\ \hline
 8.5 &	6 &	10106 \\ \hline
 9.47 &	7 &	12751 \\ \hline
-9.84 &	8 &	n/a \\ \hline \hline
+9.84 &	8 &	n/a \\ \hline
+
+
+  
+\end{tabular}
+
+%\captionof{table}{Plate 1} 
+
+
+\end{center}
+
+
+\clearpage
+
+\begin{center}
+
+
+\begin{tabular}{ |c|c|c|c|c|c| }
+
+
+  \hline
+  \textbf{Wire Speed (in/s)} & \textbf{CNC Speed (in/min)} & \textbf{Avg Droplet Spacing (\textmu s)} \\ \hline
+
 11 &	2 &	10582 \\ \hline
 10.86 &	3 &	9557 \\ \hline
 10.65 &	4 &	10811 \\ \hline
@@ -1161,8 +1199,6 @@ GTK+ has a comprehensive collection of core widgets and interfaces for use in yo
 \end{center}
 
 
-\clearpage
-
 
 \begin{center}
 
@@ -1170,7 +1206,7 @@ GTK+ has a comprehensive collection of core widgets and interfaces for use in yo
 
 
   \hline
-  \textbf{Wire Speed (in/s)} & \textbf{CNC Speed (in/min)} & \textbf{Avg Droplet Spacing (us)} \\ \hline
+  \textbf{Wire Speed (in/s)} & \textbf{CNC Speed (in/min)} & \textbf{Avg Droplet Spacing (\textmu s)} \\ \hline
 3.48 &	2 &	20014 \\ \hline
 3.47 &	3 &	23121 \\ \hline
 3.3 &	4 &	23530 \\ \hline
@@ -1198,7 +1234,29 @@ GTK+ has a comprehensive collection of core widgets and interfaces for use in yo
 10.89 &	5 &	9280 \\ \hline
 9.89 &	6 &	9204 \\ \hline
 9.83 &	7 &	8050 \\ \hline
-10.01 &	8 &	9456 \\ \hline \hline
+10.01 &	8 &	9456 \\ \hline
+
+
+
+
+
+  
+\end{tabular}
+
+%\captionof{table}{Plate 2} 
+
+\end{center}
+
+\clearpage
+
+\begin{center}
+
+\begin{tabular}{ |c|c|c|c|c|c| }
+
+
+  \hline
+  \textbf{Wire Speed (in/s)} & \textbf{CNC Speed (in/min)} & \textbf{Avg Droplet Spacing (us)} \\ \hline
+
 11.49 &	2 &	8677 \\ \hline
 11.46 &	3 &	8340 \\ \hline
 11.43 &	4 &	8752 \\ \hline
@@ -1218,8 +1276,6 @@ GTK+ has a comprehensive collection of core widgets and interfaces for use in yo
 \end{center}
 
 \clearpage
-
-
 
 \begin{center}
 
@@ -2097,7 +2153,7 @@ A Vector Graphics Library.\\
 
 \clearpage
 
-%\includepdf[pages={-}]{sensoray.pdf}
+\includepdf[pages={-}]{sensoray.pdf}
 
 
 \subsection*{Appendix C: Linux CNC}
@@ -2105,11 +2161,11 @@ A Vector Graphics Library.\\
 
 
 
-%\includepdf[pages={-}]{linuxcnc.pdf}
+\includepdf[pages={-}]{linuxcnc.pdf}
 
-%\includepdf[pages={-}]{linuxcnc1.pdf}
+\includepdf[pages={-}]{linuxcnc1.pdf}
 
-%\includepdf[pages={-}]{linuxcnc2.pdf}
+\includepdf[pages={-}]{linuxcnc2.pdf}
 
 
 \subsection*{Appendix D: Visual Studio 2013 on the 826i}
@@ -2117,7 +2173,7 @@ A Vector Graphics Library.\\
 
 
 
-%\includepdf[pages={-}]{visual.pdf}
+\includepdf[pages={-}]{visual.pdf}
 
 
 \subsection*{Appendix E: Stepper Motor and Driver}
@@ -2125,14 +2181,14 @@ A Vector Graphics Library.\\
 
 
 
-%\includepdf[pages={-}]{hybrid.pdf}
+\includepdf[pages={-}]{hybrid.pdf}
 
-%\includepdf[pages={-}]{driver.pdf}
+\includepdf[pages={-}]{driver.pdf}
 
 
 \subsection*{Appendix F: Optical Shaft Encoder}
 \addcontentsline{toc}{section}{Appendix F}
 
-%\includepdf[pages={-}]{optical.pdf}
+\includepdf[pages={-}]{optical.pdf}
 
 \end{document}
