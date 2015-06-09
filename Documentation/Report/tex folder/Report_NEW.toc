@@ -30,6 +30,7 @@
 \contentsline {subsection}{\numberline {6.1}CNC Confirmation Test}{38}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Wire Feed Test}{39}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Weld Quality Test}{41}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Degrees to Wire Speed Test}{49}{subsection.6.4}
 \contentsline {section}{\numberline {7}Photos and Videos of Progress}{50}{section.7}
 \contentsline {section}{\numberline {8}Bill of Materials (BOM)}{54}{section.8}
 \contentsline {section}{Appendix A}{56}{section*.4}

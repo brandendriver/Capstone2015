@@ -1492,43 +1492,31 @@ n/a &	2 &	n/a \\ \hline
 
 \clearpage
 
-
-
+\subsection{Degrees to Wire Speed Test}
+Determining the amount to turn the wire speed knob to increase the overall wire speed by exactly one inch was another test that was completed. This was done by figuring out the amount of time to leave the motor on to turn it 30$^\circ$ and measuring the difference in wire speeds. Multiple iterations of this test gave us a good average value, which came out to be about 40$^\circ$ per inch per second. This value was then used to determine how long to turn the stepper motor on, so as to reach a final desired wire speed setting.
 
 \begin{center}
-
-\begin{tabu}{ |c|c|c|c|c|c|c| }
-
-
-  \hline
-  \thead{Run \#} & \thead{Initial \\ Wire \\ Speed \\ (in/s)} & \thead{Final \\ Wire \\ Speed \\ (in/s)} & \thead{Turn Amount \\ (deg)} &	\thead{Ratio \\ (deg/(in/s))}	 & \thead{Time/deg \\ (us)} &	\thead{Pulse \\ On Time \\ (us)} \\ \hline
-  
-Run 1	& 0.3 &	1.1 &	30 &	37.5 &	22222 &	666660 \\ \hline
-Run 2	& 1.1 &	1.8 &	30 &	42.85714286 &	22222 &	666660 \\ \hline
-Run 3 &	1.8 &	2.5 &	30 &	42.85714286 &	22222 &	666660  \\ \hline
-Run 4 &	2.5 &	3.3 &	30 &	37.5 &	22222 &	666660 \\ \tabucline[2pt]{-}
-Run 5 &	1.9 &	3 &	45 &	40.90909091 &	22222 &	999990 \\ \hline
-Run 6 &	3 &	4.2 &	45 &	37.5 &	22222 &	999990 \\ \hline
-Run 7 &	1.2 &	2.3 &	45 &	40.90909091 &	22222 &	999990 \\ \hline
-Run 8 &	2.3 &	3.4 &	45 &	40.90909091 &	22222 &	999990 \\ \tabucline[2pt]{-}
-Run 9 &	0.9 &	2.4 &	60 &	40 &	22222 &	1333320 \\ \hline
-Run 10 &	2.4 &	3.9 &	60 &	40 &	22222 &	1333320 \\ \hline
-Run 11 &	3.9 &	5.5 &	60 &	37.5 &	22222 &	1333320 \\ \hline
-Run 12 &	3.4 &	5 &	60 &	37.5 &	22222 &	1333320 \\ \tabucline[2pt]{-}
-Run 13 &	1 &	7 &	235 &	39.16666667 &	22222 &	5222170 \\ \tabucline[2pt]{-}
-       &	  &   & \thead{Average} & \thead{39.66179654} & & \\ \hline
- 
-
-
-
-
-
- 
-\end{tabu}
-\captionof{table}{Degree to Turn Measurements}
-
+	\begin{tabu}{ |c|c|c|c|c|c|c| }
+			  \hline
+			  \thead{Run \#} & \thead{Initial \\ Wire \\ Speed \\ (in/s)} & \thead{Final \\ Wire \\ Speed \\ (in/s)} & \thead{Turn Amount \\ (deg)} &	\thead{Ratio \\ (deg/(in/s))}	 & \thead{Time/deg \\ (us)} &	\thead{Pulse \\ On Time \\ (us)} \\ \hline
+			  
+			Run 1	& 0.3 &	1.1 &	30 &	37.5 &	22222 &	666660 \\ \hline
+			Run 2	& 1.1 &	1.8 &	30 &	42.85714286 &	22222 &	666660 \\ \hline
+			Run 3 &	1.8 &	2.5 &	30 &	42.85714286 &	22222 &	666660  \\ \hline
+			Run 4 &	2.5 &	3.3 &	30 &	37.5 &	22222 &	666660 \\ \tabucline[2pt]{-}
+			Run 5 &	1.9 &	3 &	45 &	40.90909091 &	22222 &	999990 \\ \hline
+			Run 6 &	3 &	4.2 &	45 &	37.5 &	22222 &	999990 \\ \hline
+			Run 7 &	1.2 &	2.3 &	45 &	40.90909091 &	22222 &	999990 \\ \hline
+			Run 8 &	2.3 &	3.4 &	45 &	40.90909091 &	22222 &	999990 \\ \tabucline[2pt]{-}
+			Run 9 &	0.9 &	2.4 &	60 &	40 &	22222 &	1333320 \\ \hline
+			Run 10 &	2.4 &	3.9 &	60 &	40 &	22222 &	1333320 \\ \hline
+			Run 11 &	3.9 &	5.5 &	60 &	37.5 &	22222 &	1333320 \\ \hline
+			Run 12 &	3.4 &	5 &	60 &	37.5 &	22222 &	1333320 \\ \tabucline[2pt]{-}
+			Run 13 &	1 &	7 &	235 &	39.16666667 &	22222 &	5222170 \\ \tabucline[2pt]{-}
+			       &	  &   & \thead{Average} & \thead{39.66179654} & & \\ \hline
+	\end{tabu}
+	\captionof{table}{Test Results to Detemine Degrees to Turn for 1-inch Increase in Wire Speed}
 \end{center}
-
 \clearpage
 
 
