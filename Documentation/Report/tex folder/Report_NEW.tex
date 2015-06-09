@@ -12,7 +12,7 @@
 \usepackage{mdwlist}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage[table]{xcolor}
+\usepackage[table]{colortbl}
 \usepackage{caption}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{hyperref}
@@ -32,6 +32,7 @@
 \usepackage{multirow}
 \usepackage{changepage}
 \usepackage{longtable}
+\usepackage{rotating}
 %\floatstyle{boxed}
 \restylefloat{figure}
 \newlength\tindent
@@ -782,9 +783,11 @@ J\textsubscript{4} & Pin 1 & +A0 \\
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.82]{control}
+\includegraphics[scale=.7]{control}
 \caption{Control Program Flowchart}
 \end{figure}
+
+
 
 \clearpage
 
@@ -828,7 +831,7 @@ J\textsubscript{4} & Pin 1 & +A0 \\
 
 
 
-\begin{table}[h!]
+\begin{sidewaystable}[h!]
 
 \begin{center}
 
@@ -840,9 +843,9 @@ J\textsubscript{4} & Pin 1 & +A0 \\
 
 \cline{1-32}
   
-  \multicolumn{1}{|c|}{31} & \multicolumn{1}{c|}{30} & \multicolumn{1}{c|}{29} & \multicolumn{1}{c|}{28} & \multicolumn{1}{c|}{27} & \multicolumn{1}{c|}{26} & \multicolumn{1}{c|}{25} & \multicolumn{1}{c|}{24} & \multicolumn{1}{c|}{23} & \multicolumn{1}{c|}{22} & \multicolumn{1}{c|}{21} & \multicolumn{1}{c|}{20} & \multicolumn{1}{c|}{19} & \multicolumn{1}{c|}{18} & \multicolumn{1}{c|}{17} & \multicolumn{1}{c|}{16} & \multicolumn{1}{c|}{15} & \multicolumn{1}{c|}{14} & \multicolumn{1}{c|}{13} & \multicolumn{1}{c|}{12} & \multicolumn{1}{c|}{11} & \multicolumn{1}{c|}{10} & \multicolumn{1}{c|}{9} & \multicolumn{1}{c|}{8} & \multicolumn{1}{c|}{7} & \multicolumn{1}{c|}{6} & \multicolumn{1}{c|}{5} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{0}   \\ \cline{1-32}
+ \multicolumn{1}{|c|}{31} & \multicolumn{1}{c|}{30} & \multicolumn{1}{c|}{29} & \multicolumn{1}{c|}{28} & \multicolumn{1}{c|}{27} & \multicolumn{1}{c|}{26} & \multicolumn{1}{c|}{25} & \multicolumn{1}{c|}{24} & \multicolumn{1}{c|}{23} & \multicolumn{1}{c|}{22} & \multicolumn{1}{c|}{21} & \multicolumn{1}{c|}{20} & \multicolumn{1}{c|}{19} & \multicolumn{1}{c|}{18} & \multicolumn{1}{c|}{17} & \multicolumn{1}{c|}{16} & \multicolumn{1}{c|}{15} & \multicolumn{1}{c|}{14} & \multicolumn{1}{c|}{13} & \multicolumn{1}{c|}{12} & \multicolumn{1}{c|}{11} & \multicolumn{1}{c|}{10} & \multicolumn{1}{c|}{9} & \multicolumn{1}{c|}{8} & \multicolumn{1}{c|}{7} & \multicolumn{1}{c|}{6} & \multicolumn{1}{c|}{5} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{0}   \\ \cline{1-32}
   
-\multicolumn{1}{|c|}{0} & \multicolumn{1}{c|}{IP} & \multicolumn{2}{c|}{IM} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{TP} & \multicolumn{1}{c|}{NR} & \multicolumn{1}{c|}{UD} & \multicolumn{1}{c|}{BP} & \multicolumn{3}{c|}{OM} & \multicolumn{1}{c|}{OP} & \multicolumn{6}{c|}{TP} & \multicolumn{2}{c|}{TE} & \multicolumn{2}{c|}{TD} & \multicolumn{3}{c|}{K} & \multicolumn{4}{c|}{XS}  \\ \cline{1-32}
+ \multicolumn{1}{|c|}{0} & \multicolumn{1}{c|}{IP} & \multicolumn{2}{c|}{IM} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{TP} & \multicolumn{1}{c|}{NR} & \multicolumn{1}{c|}{UD} & \multicolumn{1}{c|}{BP} & \multicolumn{3}{c|}{OM} & \multicolumn{1}{c|}{OP} & \multicolumn{6}{c|}{TP} & \multicolumn{2}{c|}{TE} & \multicolumn{2}{c|}{TD} & \multicolumn{3}{c|}{K} & \multicolumn{4}{c|}{XS}  \\ \cline{1-32}
 
 \multicolumn{1}{|c}{0} & \multicolumn{1}{|c|}{0} & \multicolumn{1}{c}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c}{0} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c}{0} & \multicolumn{1}{c|}{} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{0} & \multicolumn{1}{c|}{0}   \\ \cline{1-32}
 
@@ -860,32 +863,28 @@ J\textsubscript{4} & Pin 1 & +A0 \\
 %\end{turn}
 
 \captionof{table}{Counter Mode Register Description} 
-
+\label{countermode}
 \end{center}
 
-\end{table}
+\end{sidewaystable}
 
-where, 
+The following list shows the definitions for the rows in Table \ref{countermode}:
 
 \begin{itemize*}
-
-
-
-\item Row 3 - BIN VAL For PWM Mode
-\item Row 4 - HEX VAL
-\item Row 5 - BIN VAL For Frequency Measurement Mode
-\item Row 6 - HEX VAL
-
-
+	\item Row 3 - BIN VAL For PWM Mode
+	\item Row 4 - HEX VAL
+	\item Row 5 - BIN VAL For Frequency Measurement Mode
+	\item Row 6 - HEX VAL
 \end{itemize*}
 
 
 
-\begin{table}[h!]
+
+\begin{sidewaystable}[h!]
 
 \begin{center}
 
-\begin{adjustbox}{max width=\textwidth}
+\begin{adjustbox}{width=\textwidth}
 
 \begin{tabu}{ |c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| }
 
@@ -900,7 +899,6 @@ where,
   \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & 1 & 3 & 5 & 7 & 9 & 11 & 13 & 15 & 17 & 19 & 21 & 23 & 25 & 27 & 29 & 31 & 33 & 35 & 37 & 39 & 41 & 43 & 45 & 47  \\ \tabucline[1pt]{9-32} \cline{9-32}
   
   
-%  \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \cellcolor{red!25}$\times$ & \multicolumn{1}{|c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[2pt]c|}{\cellcolor{green!25}1} & \multicolumn{1}{|[1pt]c|}{\cellcolor{green!25}1} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[2pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[2pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[2pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[2pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c|}{\cellcolor{red!25}$\times$}   \\ \tabucline[2pt]{9-32}
   
   \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{|[2pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{c}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{c|}{\cellcolor{green!25}1} & \multicolumn{1}{c|}{\cellcolor{green!25}1} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{c}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|c}{\cellcolor{red!25}$\times$} & \multicolumn{1}{|[1pt]c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{c|}{\cellcolor{red!25}$\times$} & \multicolumn{1}{c|[2pt]}{\cellcolor{red!25}$\times$}   \\ \tabucline[1pt]{9-32}
   
@@ -929,34 +927,30 @@ where,
 \end{adjustbox}
 
 \captionof{table}{DIO[0] Register Description} 
-
+\label{dioref}
 \end{center}
 
-\end{table}
+\end{sidewaystable}
 
-where, 
+The following list shows the definitions for the rows in Table \ref{dioref}:
 
 \begin{itemize*}
-
-
-
-\item Row 1 - Bit
-\item Row 2 - Channel
-\item Row 3 - Pin
-\item Row 4 - G1/G0 Read Mask
-\item Row 5 - G1/G0 Write Mask
-\item Row 6 - G1 INPUT ACTIVE
-\item Row 7 - G0 INPUT ACTIVE
-\item Row 8 - Motor CCW
-\item Row 9 - Motor CW
-\item Row 10 - Wire Speed Home Switch
-\item Row 11 - Weld and CNC stop
-\item Row 12 - CNC start
-
-
+		\item Row 1 - Bit
+		\item Row 2 - Channel
+		\item Row 3 - Pin
+		\item Row 4 - G1/G0 Read Mask
+		\item Row 5 - G1/G0 Write Mask
+		\item Row 6 - G1 INPUT ACTIVE
+		\item Row 7 - G0 INPUT ACTIVE
+		\item Row 8 - Motor CCW
+		\item Row 9 - Motor CW
+		\item Row 10 - Wire Speed Home Switch
+		\item Row 11 - Weld and CNC stop
+		\item Row 12 - CNC start
 \end{itemize*}
 
 \clearpage
+
 
 
 \subsection{GUI Description}

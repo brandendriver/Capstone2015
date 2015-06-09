@@ -22,18 +22,18 @@
 \contentsline {subsection}{\numberline {5.2}G-Code}{25}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}Control Program}{26}{subsection.5.3}
 \contentsline {subsection}{\numberline {5.4}Register Descriptions}{31}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}GUI Description}{33}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}The Graphical User Interface (GUI)}{33}{subsection.5.6}
-\contentsline {subsection}{\numberline {5.7}Reasons for using GTK+}{33}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}Examples of GUIs created using GTK+}{35}{subsection.5.8}
-\contentsline {section}{\numberline {6}Testing}{37}{section.6}
-\contentsline {subsection}{\numberline {6.1}CNC Confirmation Test}{37}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Wire Feed Test}{38}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Weld Quality Test}{40}{subsection.6.3}
-\contentsline {section}{\numberline {7}Photos and Videos of Progress}{49}{section.7}
-\contentsline {section}{\numberline {8}Bill of Materials (BOM)}{53}{section.8}
-\contentsline {section}{Appendix A}{55}{section*.4}
-\contentsline {section}{Appendix B}{55}{section*.5}
-\contentsline {section}{Appendix C}{55}{section*.6}
-\contentsline {section}{Appendix D}{57}{section*.7}
-\contentsline {section}{Appendix E}{74}{section*.8}
+\contentsline {subsection}{\numberline {5.5}GUI Description}{34}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}The Graphical User Interface (GUI)}{34}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Reasons for using GTK+}{34}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Examples of GUIs created using GTK+}{36}{subsection.5.8}
+\contentsline {section}{\numberline {6}Testing}{38}{section.6}
+\contentsline {subsection}{\numberline {6.1}CNC Confirmation Test}{38}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Wire Feed Test}{39}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Weld Quality Test}{41}{subsection.6.3}
+\contentsline {section}{\numberline {7}Photos and Videos of Progress}{50}{section.7}
+\contentsline {section}{\numberline {8}Bill of Materials (BOM)}{54}{section.8}
+\contentsline {section}{Appendix A}{56}{section*.4}
+\contentsline {section}{Appendix B}{56}{section*.5}
+\contentsline {section}{Appendix C}{56}{section*.6}
+\contentsline {section}{Appendix D}{58}{section*.7}
+\contentsline {section}{Appendix E}{75}{section*.8}

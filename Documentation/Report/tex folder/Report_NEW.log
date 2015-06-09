@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.7.8)  9 JUN 2015 12:04
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.7.8)  9 JUN 2015 12:55
 entering extended mode
 **C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex*folde
 r/Report_NEW.tex
@@ -480,35 +480,31 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
 
-! LaTeX Error: Option clash for package xcolor.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \usepackage
-                {caption}
-The package xcolor has already been loaded with options:
-  []
-There has now been an attempt to load it with options
-  [table]
-Adding the global options:
-  ,table
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
-
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen157
+\extrarowheight=\dimen158
+\NC@list=\toks34
+\extratabsurround=\skip48
+\backup@length=\skip49
+)
+\everycr=\toks35
+\minrowclearance=\skip50
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2010/01/09 v3.1m Customizing captions (AR)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
-\captionmargin=\dimen157
-\captionmargin@=\dimen158
-\captionwidth=\dimen159
-\caption@indent=\dimen160
-\caption@parindent=\dimen161
-\caption@hangindent=\dimen162
+\captionmargin=\dimen159
+\captionmargin@=\dimen160
+\captionwidth=\dimen161
+\caption@indent=\dimen162
+\caption@parindent=\dimen163
+\caption@hangindent=\dimen164
 )
 \c@ContinuedFloat=\count132
 Package caption Info: rotating package is loaded.
@@ -521,8 +517,8 @@ Package: todonotes 2011/04/21
 Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-\XKV@toks=\toks34
-\XKV@tempa@toks=\toks35
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
 \XKV@depth=\count133
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
@@ -533,10 +529,10 @@ File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 )) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.te
 x"
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen163
-\pgffor@skip=\dimen164
-\pgffor@stack=\toks36
-\pgffor@toks=\toks37
+\pgffor@iter=\dimen165
+\pgffor@skip=\dimen166
+\pgffor@stack=\toks38
+\pgffor@toks=\toks39
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
 e.tex"
@@ -546,14 +542,14 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 dlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count134
-\pgfplotmarksize=\dimen165
+\pgfplotmarksize=\dimen167
 )
-\tikz@lastx=\dimen166
-\tikz@lasty=\dimen167
-\tikz@lastxsaved=\dimen168
-\tikz@lastysaved=\dimen169
-\tikzleveldistance=\dimen170
-\tikzsiblingdistance=\dimen171
+\tikz@lastx=\dimen168
+\tikz@lasty=\dimen169
+\tikz@lastxsaved=\dimen170
+\tikz@lastysaved=\dimen171
+\tikzleveldistance=\dimen172
+\tikzsiblingdistance=\dimen173
 \tikz@figbox=\box36
 \tikz@tempbox=\box37
 \tikztreelevel=\count135
@@ -578,14 +574,14 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count143
 \calc@Bcount=\count144
-\calc@Adimen=\dimen172
-\calc@Bdimen=\dimen173
-\calc@Askip=\skip48
-\calc@Bskip=\skip49
+\calc@Adimen=\dimen174
+\calc@Bdimen=\dimen175
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count145
-\calc@Cskip=\skip50
+\calc@Cskip=\skip53
 )
 \c@@todonotes@numberoftodonotes=\count146
 )
@@ -635,7 +631,7 @@ Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 )
-\@linkdim=\dimen174
+\@linkdim=\dimen176
 \Hy@linkcounter=\count147
 \Hy@pagecounter=\count148
 
@@ -662,8 +658,8 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4617.
 \Fld@menulength=\count151
-\Field@Width=\dimen175
-\Fld@charsize=\dimen176
+\Field@Width=\dimen177
+\Fld@charsize=\dimen178
 Package hyperref Info: Hyper figures OFF on input line 5701.
 Package hyperref Info: Link nesting OFF on input line 5706.
 Package hyperref Info: Hyper index ON on input line 5709.
@@ -690,45 +686,31 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip51
+\Hy@SectionHShift=\skip54
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
-\@enLab=\toks38
+\@enLab=\toks40
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen177
-\lightrulewidth=\dimen178
-\cmidrulewidth=\dimen179
-\belowrulesep=\dimen180
-\belowbottomsep=\dimen181
-\aboverulesep=\dimen182
-\abovetopsep=\dimen183
-\cmidrulesep=\dimen184
-\cmidrulekern=\dimen185
-\defaultaddspace=\dimen186
+\heavyrulewidth=\dimen179
+\lightrulewidth=\dimen180
+\cmidrulewidth=\dimen181
+\belowrulesep=\dimen182
+\belowbottomsep=\dimen183
+\aboverulesep=\dimen184
+\abovetopsep=\dimen185
+\cmidrulesep=\dimen186
+\cmidrulekern=\dimen187
+\defaultaddspace=\dimen188
 \@cmidla=\count157
 \@cmidlb=\count158
-\@aboverulesep=\dimen187
-\@belowrulesep=\dimen188
+\@aboverulesep=\dimen189
+\@belowrulesep=\dimen190
 \@thisruleclass=\count159
 \@lastruleclass=\count160
-\@thisrulewidth=\dimen189
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
-Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen190
-\extrarowheight=\dimen191
-\NC@list=\toks39
-\extratabsurround=\skip52
-\backup@length=\skip53
-)
-\everycr=\toks40
-\minrowclearance=\skip54
+\@thisrulewidth=\dimen191
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen192
@@ -844,32 +826,32 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 )
 \@float@every@figure=\toks49
 \tindent=\skip60
-Package hyperref Info: Option `colorlinks' set `true' on input line 48.
+Package hyperref Info: Option `colorlinks' set `true' on input line 49.
 \Oldarrayrulewidth=\skip61
 
 ("C:\Users\Branden\Documents\School\Capstone2015\Documentation\Report\tex folde
 r\Report_NEW.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 64.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 65.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 65.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\lgrcmr.fd"
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -922,15 +904,15 @@ fontencoding LGR patched
 \MPnumerator=\count183
 \everyMPtoPDFconversion=\toks51
 ) ABD: EveryShipout initializing macros
-LaTeX Info: Redefining \celsius on input line 64.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 64.
+LaTeX Info: Redefining \celsius on input line 65.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 65.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 64.
-Package gensymb Info: Using \Omega for \ohm on input line 64.
+LaTeX Info: Redefining \ohm on input line 65.
+Package gensymb Info: Using \Omega for \ohm on input line 65.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -944,7 +926,7 @@ Package: ltcaption 2008/03/28 v1.2 longtable captions (AR)
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring ON on input line 64.
+Package hyperref Info: Link coloring ON on input line 65.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -954,21 +936,21 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count184
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 65.
+LaTeX Info: Redefining \pageref on input line 65.
+LaTeX Info: Redefining \nameref on input line 65.
 
 ("C:\Users\Branden\Documents\School\Capstone2015\Documentation\Report\tex folde
 r\Report_NEW.out")
 ("C:\Users\Branden\Documents\School\Capstone2015\Documentation\Report\tex folde
 r\Report_NEW.out")
 \@outlinefile=\write4
-LaTeX Font Info:    Try loading font information for U+msa on input line 104.
+LaTeX Font Info:    Try loading font information for U+msa on input line 105.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 104.
+LaTeX Font Info:    Try loading font information for U+msb on input line 105.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -976,7 +958,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 <logo.png, id=158, 512.91624pt x 137.51375pt>
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 132.
+Package pdftex.def Info: logo.png used on input line 133.
 (pdftex.def)             Requested size: 256.45749pt x 68.7567pt.
  [1
 
@@ -987,30 +969,30 @@ r\Report_NEW.toc"pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.38 ...line {section}{Appendix D}{57}{section*.7}
+l.38 ...line {section}{Appendix D}{58}{section*.7}
                                                    [1
 
 ])
 \tf@toc=\write5
  [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 160.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 161.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 161.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\unicode\data\uni-32.def"
 File: uni-32.def 2004/10/17 UCS: Unicode data U+2000..U+20FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 164--171
+Underfull \hbox (badness 10000) in paragraph at lines 165--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--176
+Underfull \hbox (badness 10000) in paragraph at lines 173--177
 
  []
 
@@ -1019,10 +1001,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--176
 ] <mainfc.png, id=230, 536.7252pt x 209.1012pt>
 File: mainfc.png Graphic file (type png)
  <use mainfc.png>
-Package pdftex.def Info: mainfc.png used on input line 210.
+Package pdftex.def Info: mainfc.png used on input line 211.
 (pdftex.def)             Requested size: 483.04822pt x 188.18933pt.
 
-Overfull \hbox (13.2932pt too wide) in paragraph at lines 210--211
+Overfull \hbox (13.2932pt too wide) in paragraph at lines 211--212
  [][] 
  []
 
@@ -1033,7 +1015,7 @@ r/mainfc.png>] <detailedflo.png, id=236, 696.4419pt x 506.8536pt>
 File: detailedflo.png Graphic file (type png)
 
 <use detailedflo.png>
-Package pdftex.def Info: detailedflo.png used on input line 218.
+Package pdftex.def Info: detailedflo.png used on input line 219.
 (pdftex.def)             Requested size: 456.16747pt x 331.98767pt.
  [6
 
@@ -1043,38 +1025,38 @@ r/detailedflo.png>]
 File: finalganttchart.jpg Graphic file (type jpg)
 
 <use finalganttchart.jpg>
-Package pdftex.def Info: finalganttchart.jpg used on input line 228.
+Package pdftex.def Info: finalganttchart.jpg used on input line 229.
 (pdftex.def)             Requested size: 580.5075pt x 347.44128pt.
  [7
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/finalganttchart.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
 [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
 <26.png, id=252, 680.5425pt x 389.455pt>
 File: 26.png Graphic file (type png)
  <use 26.png>
-Package pdftex.def Info: 26.png used on input line 280.
+Package pdftex.def Info: 26.png used on input line 281.
 (pdftex.def)             Requested size: 340.27042pt x 194.72702pt.
 
 <50.png, id=253, 754.82pt x 337.26pt>
 File: 50.png Graphic file (type png)
  <use 50.png>
-Package pdftex.def Info: 50.png used on input line 288.
+Package pdftex.def Info: 50.png used on input line 289.
 (pdftex.def)             Requested size: 415.1523pt x 185.49356pt.
  [9
 
@@ -1084,10 +1066,10 @@ tex folder/50.png>]
 <realbreaker.jpg, id=258, 722.7pt x 406.51875pt>
 File: realbreaker.jpg Graphic file (type jpg)
  <use realbreaker.jpg>
-Package pdftex.def Info: realbreaker.jpg used on input line 296.
+Package pdftex.def Info: realbreaker.jpg used on input line 297.
 (pdftex.def)             Requested size: 361.3491pt x 203.25887pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
@@ -1098,10 +1080,10 @@ r/realbreaker.jpg>] <tempsensor.jpg, id=263, 642.4pt x 481.8pt>
 File: tempsensor.jpg Graphic file (type jpg)
 
 <use tempsensor.jpg>
-Package pdftex.def Info: tempsensor.jpg used on input line 310.
+Package pdftex.def Info: tempsensor.jpg used on input line 311.
 (pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
 
@@ -1112,12 +1094,12 @@ r/tempsensor.jpg>] <enc.png, id=268, 393.72093pt x 441.14813pt>
 File: enc.png Graphic file (type png)
 
 <use enc.png>
-Package pdftex.def Info: enc.png used on input line 324.
+Package pdftex.def Info: enc.png used on input line 325.
 (pdftex.def)             Requested size: 196.85999pt x 220.57352pt.
  <encreal.jpg, id=269, 642.4pt x 481.8pt>
 File: encreal.jpg Graphic file (type jpg)
  <use encreal.jpg>
-Package pdftex.def Info: encreal.jpg used on input line 330.
+Package pdftex.def Info: encreal.jpg used on input line 331.
 (pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
 
 [12
@@ -1125,14 +1107,14 @@ Package pdftex.def Info: encreal.jpg used on input line 330.
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/enc.png> <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report
 /tex folder/encreal.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
 
  []
 
 <relay11.png, id=275, 481.04718pt x 384.6872pt>
 File: relay11.png Graphic file (type png)
  <use relay11.png>
-Package pdftex.def Info: relay11.png used on input line 345.
+Package pdftex.def Info: relay11.png used on input line 346.
 (pdftex.def)             Requested size: 384.83827pt x 307.75017pt.
  [13
 
@@ -1140,59 +1122,59 @@ Package pdftex.def Info: relay11.png used on input line 345.
 r/relay11.png>] <relayboard.png, id=281, 351.56343pt x 239.39438pt>
 File: relayboard.png Graphic file (type png)
  <use relayboard.png>
-Package pdftex.def Info: relayboard.png used on input line 354.
+Package pdftex.def Info: relayboard.png used on input line 355.
 (pdftex.def)             Requested size: 351.56256pt x 239.39378pt.
 
 <relayreal.jpg, id=282, 642.4pt x 481.8pt>
 File: relayreal.jpg Graphic file (type jpg)
  <use relayreal.jpg>
-Package pdftex.def Info: relayreal.jpg used on input line 360.
+Package pdftex.def Info: relayreal.jpg used on input line 361.
 (pdftex.def)             Requested size: 353.32109pt x 264.99081pt.
  [14
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/relayboard.png> <C:/Users/Branden/Documents/School/Capstone2015/Documentation
 /Report/tex folder/relayreal.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 368--371
+Underfull \hbox (badness 10000) in paragraph at lines 369--372
 
  []
 
 <stepper.jpg, id=287, 642.4pt x 481.8pt>
 File: stepper.jpg Graphic file (type jpg)
  <use stepper.jpg>
-Package pdftex.def Info: stepper.jpg used on input line 378.
+Package pdftex.def Info: stepper.jpg used on input line 379.
 (pdftex.def)             Requested size: 353.32109pt x 264.99081pt.
  [15
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/stepper.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
 
 <pm.jpg, id=292, 642.4pt x 481.8pt>
 File: pm.jpg Graphic file (type jpg)
  <use pm.jpg>
-Package pdftex.def Info: pm.jpg used on input line 392.
+Package pdftex.def Info: pm.jpg used on input line 393.
 (pdftex.def)             Requested size: 353.32109pt x 264.99081pt.
  [16
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/pm.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
 <currentsensor.png, id=297, 570.63188pt x 293.59688pt>
 File: currentsensor.png Graphic file (type png)
  <use currentsensor.png>
-Package pdftex.def Info: currentsensor.png used on input line 409.
+Package pdftex.def Info: currentsensor.png used on input line 410.
 (pdftex.def)             Requested size: 342.38177pt x 176.15947pt.
 
 <currentboard.png, id=298, 523.20468pt x 246.9225pt>
 File: currentboard.png Graphic file (type png)
  <use currentboard.png>
-Package pdftex.def Info: currentboard.png used on input line 415.
+Package pdftex.def Info: currentboard.png used on input line 416.
 (pdftex.def)             Requested size: 366.24077pt x 172.84456pt.
 
 [17
@@ -1203,28 +1185,28 @@ ion/Report/tex folder/currentboard.png>]
 <currentreal.jpg, id=304, 642.4pt x 481.8pt>
 File: currentreal.jpg Graphic file (type jpg)
  <use currentreal.jpg>
-Package pdftex.def Info: currentreal.jpg used on input line 425.
+Package pdftex.def Info: currentreal.jpg used on input line 426.
 (pdftex.def)             Requested size: 353.32109pt x 264.99081pt.
  [18
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/currentreal.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
 
  []
 
 <speed1.png, id=310, 210.03468pt x 114.4275pt>
 File: speed1.png Graphic file (type png)
  <use speed1.png>
-Package pdftex.def Info: speed1.png used on input line 439.
+Package pdftex.def Info: speed1.png used on input line 440.
 (pdftex.def)             Requested size: 147.02327pt x 80.0987pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--478
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
@@ -1235,7 +1217,7 @@ r/speed1.png>] <connections.png, id=320, 323.609pt x 192.72pt>
 File: connections.png Graphic file (type png)
 
 <use connections.png>
-Package pdftex.def Info: connections.png used on input line 494.
+Package pdftex.def Info: connections.png used on input line 495.
 (pdftex.def)             Requested size: 258.88753pt x 154.1762pt.
  [20
 
@@ -1249,11 +1231,11 @@ r/connections.png>] [21
 ] [24
 
 ] [25]
-<control.png, id=347, 469.755pt x 715.473pt>
+<control.png, id=347, 487.8225pt x 841.9455pt>
 File: control.png Graphic file (type png)
  <use control.png>
-Package pdftex.def Info: control.png used on input line 785.
-(pdftex.def)             Requested size: 385.2016pt x 586.69167pt.
+Package pdftex.def Info: control.png used on input line 786.
+(pdftex.def)             Requested size: 341.47342pt x 589.35783pt.
  [26
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
@@ -1261,10 +1243,10 @@ r/control.png>] <dropletspacing.png, id=353, 559.1289pt x 705.5961pt>
 File: dropletspacing.png Graphic file (type png)
 
 <use dropletspacing.png>
-Package pdftex.def Info: dropletspacing.png used on input line 794.
+Package pdftex.def Info: dropletspacing.png used on input line 797.
 (pdftex.def)             Requested size: 475.26181pt x 599.75952pt.
 
-Overfull \hbox (5.50679pt too wide) in paragraph at lines 794--795
+Overfull \hbox (5.50679pt too wide) in paragraph at lines 797--798
  [][] 
  []
 
@@ -1275,7 +1257,7 @@ r/dropletspacing.png>] <getg0g1.jpg, id=359, 324.0105pt x 663.1977pt>
 File: getg0g1.jpg Graphic file (type jpg)
 
 <use getg0g1.jpg>
-Package pdftex.def Info: getg0g1.jpg used on input line 802.
+Package pdftex.def Info: getg0g1.jpg used on input line 805.
 (pdftex.def)             Requested size: 291.60675pt x 596.8724pt.
  [28
 
@@ -1284,7 +1266,7 @@ r/getg0g1.jpg>]
 <setspeed.jpg, id=364, 399.1713pt x 524.4393pt>
 File: setspeed.jpg Graphic file (type jpg)
  <use setspeed.jpg>
-Package pdftex.def Info: setspeed.jpg used on input line 811.
+Package pdftex.def Info: setspeed.jpg used on input line 814.
 (pdftex.def)             Requested size: 439.08978pt x 576.88501pt.
  [29
 
@@ -1292,7 +1274,7 @@ Package pdftex.def Info: setspeed.jpg used on input line 811.
 r/setspeed.jpg>] <droplet.png, id=369, 356.2911pt x 509.5035pt>
 File: droplet.png Graphic file (type png)
  <use droplet.png>
-Package pdftex.def Info: droplet.png used on input line 819.
+Package pdftex.def Info: droplet.png used on input line 822.
 (pdftex.def)             Requested size: 391.92142pt x 560.45557pt.
 
 [30
@@ -1300,130 +1282,111 @@ Package pdftex.def Info: droplet.png used on input line 819.
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/droplet.png>]
 
-! Package xkeyval Error: `max width' undefined in families `Gin'.
-
-See the xkeyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.929 \end{adjustbox}
-                     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (303.44087pt too wide) in paragraph at lines 929--930
- [] 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [31
 
-] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 970--971
+] [32] [33]
+Underfull \hbox (badness 10000) in paragraph at lines 964--965
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 972--973
+Underfull \hbox (badness 10000) in paragraph at lines 966--967
 
  []
 
-[33
+[34
 
-] [34] <gui1.png, id=393, 834.11626pt x 639.38875pt>
+] [35] <gui1.png, id=399, 834.11626pt x 639.38875pt>
 File: gui1.png Graphic file (type png)
  <use gui1.png>
-Package pdftex.def Info: gui1.png used on input line 1034.
+Package pdftex.def Info: gui1.png used on input line 1028.
 (pdftex.def)             Requested size: 333.6406pt x 255.75096pt.
 
-<gui2.png, id=394, 707.64375pt x 451.6875pt>
+<gui2.png, id=400, 707.64375pt x 451.6875pt>
 File: gui2.png Graphic file (type png)
  <use gui2.png>
-Package pdftex.def Info: gui2.png used on input line 1039.
+Package pdftex.def Info: gui2.png used on input line 1033.
 (pdftex.def)             Requested size: 353.82101pt x 225.84319pt.
- [35
-
- <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
-r/gui1.png> <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Repor
-t/tex folder/gui2.png>] <gui.png, id=399, 849.574pt x 603.856pt>
-File: gui.png Graphic file (type png)
- <use gui.png>
-Package pdftex.def Info: gui.png used on input line 1046.
-(pdftex.def)             Requested size: 424.78596pt x 301.92726pt.
  [36
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
-r/gui.png>]
-<TP1.png, id=406, 519.6213pt x 479.1501pt>
-File: TP1.png Graphic file (type png)
- <use TP1.png>
-Package pdftex.def Info: TP1.png used on input line 1059.
-(pdftex.def)             Requested size: 493.63744pt x 455.19pt.
-
-Overfull \hbox (23.88242pt too wide) in paragraph at lines 1059--1060
- [][] 
- []
-
-[37
+r/gui1.png> <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Repor
+t/tex folder/gui2.png>] <gui.png, id=406, 849.574pt x 603.856pt>
+File: gui.png Graphic file (type png)
+ <use gui.png>
+Package pdftex.def Info: gui.png used on input line 1040.
+(pdftex.def)             Requested size: 424.78596pt x 301.92726pt.
+ [37
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
-r/TP1.png>] <tp-4.jpg, id=412, 499.3857pt x 537.9297pt>
-File: tp-4.jpg Graphic file (type jpg)
- <use tp-4.jpg>
-Package pdftex.def Info: tp-4.jpg used on input line 1068.
-(pdftex.def)             Requested size: 449.44298pt x 484.13226pt.
+r/gui.png>]
+<TP1.png, id=412, 519.6213pt x 479.1501pt>
+File: TP1.png Graphic file (type png)
+ <use TP1.png>
+Package pdftex.def Info: TP1.png used on input line 1053.
+(pdftex.def)             Requested size: 493.63744pt x 455.19pt.
+
+Overfull \hbox (23.88242pt too wide) in paragraph at lines 1053--1054
+ [][] 
+ []
 
 [38
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
+r/TP1.png>] <tp-4.jpg, id=418, 499.3857pt x 537.9297pt>
+File: tp-4.jpg Graphic file (type jpg)
+ <use tp-4.jpg>
+Package pdftex.def Info: tp-4.jpg used on input line 1062.
+(pdftex.def)             Requested size: 449.44298pt x 484.13226pt.
+
+[39
+
+ <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/tp-4.jpg>]
-Overfull \hbox (7.16437pt too wide) in paragraph at lines 1076--1092
+Overfull \hbox (7.16437pt too wide) in paragraph at lines 1070--1086
  [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1093.
+(caption)                particular \caption on input line 1087.
 See the caption package documentation for explanation.
 
-<speedplot.png, id=417, 421.575pt x 316.18124pt>
+<speedplot.png, id=423, 421.575pt x 316.18124pt>
 File: speedplot.png Graphic file (type png)
  <use speedplot.png>
-Package pdftex.def Info: speedplot.png used on input line 1102.
+Package pdftex.def Info: speedplot.png used on input line 1096.
 (pdftex.def)             Requested size: 400.49397pt x 300.37047pt.
- [39
-
- <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
-r/speedplot.png (PNG copy)>] <tp-5-1.jpg, id=423, 514.8033pt x 647.7801pt>
-File: tp-5-1.jpg Graphic file (type jpg)
-
-<use tp-5-1.jpg>
-Package pdftex.def Info: tp-5-1.jpg used on input line 1113.
-(pdftex.def)             Requested size: 463.3187pt x 582.9967pt.
  [40
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
+r/speedplot.png (PNG copy)>] <tp-5-1.jpg, id=429, 514.8033pt x 647.7801pt>
+File: tp-5-1.jpg Graphic file (type jpg)
+
+<use tp-5-1.jpg>
+Package pdftex.def Info: tp-5-1.jpg used on input line 1107.
+(pdftex.def)             Requested size: 463.3187pt x 582.9967pt.
+ [41
+
+ <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/tp-5-1.jpg>]
-<tp-5-2.jpg, id=428, 500.8311pt x 165.9801pt>
+<tp-5-2.jpg, id=434, 500.8311pt x 165.9801pt>
 File: tp-5-2.jpg Graphic file (type jpg)
  <use tp-5-2.jpg>
-Package pdftex.def Info: tp-5-2.jpg used on input line 1121.
+Package pdftex.def Info: tp-5-2.jpg used on input line 1115.
 (pdftex.def)             Requested size: 450.74382pt x 149.38069pt.
- [41
+ [42
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/tp-5-2.jpg>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1196.
-See the caption package documentation for explanation.
-
-[42
-
-]
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1274.
+(caption)                particular \caption on input line 1190.
 See the caption package documentation for explanation.
 
 [43
@@ -1431,7 +1394,7 @@ See the caption package documentation for explanation.
 ]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1327.
+(caption)                particular \caption on input line 1268.
 See the caption package documentation for explanation.
 
 [44
@@ -1439,7 +1402,7 @@ See the caption package documentation for explanation.
 ]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1382.
+(caption)                particular \caption on input line 1321.
 See the caption package documentation for explanation.
 
 [45
@@ -1447,7 +1410,7 @@ See the caption package documentation for explanation.
 ]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1439.
+(caption)                particular \caption on input line 1376.
 See the caption package documentation for explanation.
 
 [46
@@ -1455,7 +1418,7 @@ See the caption package documentation for explanation.
 ]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1495.
+(caption)                particular \caption on input line 1433.
 See the caption package documentation for explanation.
 
 [47
@@ -1463,532 +1426,540 @@ See the caption package documentation for explanation.
 ]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1534.
+(caption)                particular \caption on input line 1489.
 See the caption package documentation for explanation.
 
 [48
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1545--1546
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1528.
+See the caption package documentation for explanation.
+
+[49
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1539--1540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1547--1548
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1542
 
  []
 
-<pic1.jpg, id=472, 642.4pt x 481.8pt>
+<pic1.jpg, id=478, 642.4pt x 481.8pt>
 File: pic1.jpg Graphic file (type jpg)
  <use pic1.jpg>
-Package pdftex.def Info: pic1.jpg used on input line 1551.
+Package pdftex.def Info: pic1.jpg used on input line 1545.
 (pdftex.def)             Requested size: 385.44298pt x 289.08221pt.
- [49
-
- <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
-r/pic1.jpg>]
-<pic2.jpg, id=477, 642.4pt x 481.8pt>
-File: pic2.jpg Graphic file (type jpg)
- <use pic2.jpg>
-Package pdftex.def Info: pic2.jpg used on input line 1562.
-(pdftex.def)             Requested size: 295.94795pt x 221.96886pt.
-
-<pic3.jpg, id=478, 642.4pt x 481.8pt>
-File: pic3.jpg Graphic file (type jpg)
- <use pic3.jpg>
-Package pdftex.def Info: pic3.jpg used on input line 1570.
-(pdftex.def)             Requested size: 295.94795pt x 221.96886pt.
-
-<IMG_20150410_163658.jpg, id=479, 1702.36pt x 1316.92pt>
-File: IMG_20150410_163658.jpg Graphic file (type jpg)
-
-<use IMG_20150410_163658.jpg>
-Package pdftex.def Info: IMG_20150410_163658.jpg used on input line 1579.
-(pdftex.def)             Requested size: 352.31625pt x 272.54245pt.
-
-<IMG_20150410_163626.jpg, id=480, 1027.84pt x 770.88pt>
-File: IMG_20150410_163626.jpg Graphic file (type jpg)
-
-<use IMG_20150410_163626.jpg>
-Package pdftex.def Info: IMG_20150410_163626.jpg used on input line 1588.
-(pdftex.def)             Requested size: 352.31625pt x 264.23654pt.
-
-<IMG_20150410_163441.jpg, id=481, 4111.36pt x 3051.4pt>
-File: IMG_20150410_163441.jpg Graphic file (type jpg)
-
-<use IMG_20150410_163441.jpg>
-Package pdftex.def Info: IMG_20150410_163441.jpg used on input line 1596.
-(pdftex.def)             Requested size: 352.31625pt x 261.48407pt.
- <23.png, id=482, 1028.34187pt x 578.16pt>
-File: 23.png Graphic file (type png)
-
-<use 23.png>
-Package pdftex.def Info: 23.png used on input line 1605.
-(pdftex.def)             Requested size: 352.31625pt x 198.08035pt.
  [50
 
  <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
+r/pic1.jpg>]
+<pic2.jpg, id=483, 642.4pt x 481.8pt>
+File: pic2.jpg Graphic file (type jpg)
+ <use pic2.jpg>
+Package pdftex.def Info: pic2.jpg used on input line 1556.
+(pdftex.def)             Requested size: 295.94795pt x 221.96886pt.
+
+<pic3.jpg, id=484, 642.4pt x 481.8pt>
+File: pic3.jpg Graphic file (type jpg)
+ <use pic3.jpg>
+Package pdftex.def Info: pic3.jpg used on input line 1564.
+(pdftex.def)             Requested size: 295.94795pt x 221.96886pt.
+
+<IMG_20150410_163658.jpg, id=485, 1702.36pt x 1316.92pt>
+File: IMG_20150410_163658.jpg Graphic file (type jpg)
+
+<use IMG_20150410_163658.jpg>
+Package pdftex.def Info: IMG_20150410_163658.jpg used on input line 1573.
+(pdftex.def)             Requested size: 352.31625pt x 272.54245pt.
+
+<IMG_20150410_163626.jpg, id=486, 1027.84pt x 770.88pt>
+File: IMG_20150410_163626.jpg Graphic file (type jpg)
+
+<use IMG_20150410_163626.jpg>
+Package pdftex.def Info: IMG_20150410_163626.jpg used on input line 1582.
+(pdftex.def)             Requested size: 352.31625pt x 264.23654pt.
+
+<IMG_20150410_163441.jpg, id=487, 4111.36pt x 3051.4pt>
+File: IMG_20150410_163441.jpg Graphic file (type jpg)
+
+<use IMG_20150410_163441.jpg>
+Package pdftex.def Info: IMG_20150410_163441.jpg used on input line 1590.
+(pdftex.def)             Requested size: 352.31625pt x 261.48407pt.
+ <23.png, id=488, 1028.34187pt x 578.16pt>
+File: 23.png Graphic file (type png)
+
+<use 23.png>
+Package pdftex.def Info: 23.png used on input line 1599.
+(pdftex.def)             Requested size: 352.31625pt x 198.08035pt.
+ [51
+
+ <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex folde
 r/pic2.jpg> <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Repor
-t/tex folder/pic3.jpg>] [51 <C:/Users/Branden/Documents/School/Capstone2015/Doc
+t/tex folder/pic3.jpg>] [52 <C:/Users/Branden/Documents/School/Capstone2015/Doc
 umentation/Report/tex folder/IMG_20150410_163658.jpg> <C:/Users/Branden/Documen
 ts/School/Capstone2015/Documentation/Report/tex folder/IMG_20150410_163626.jpg>
-] [52 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex 
+] [53 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex 
 folder/IMG_20150410_163441.jpg> <C:/Users/Branden/Documents/School/Capstone2015
-/Documentation/Report/tex folder/23.png>] [53
-
-] [54
+/Documentation/Report/tex folder/23.png>] [54
 
 ] [55
 
+] [56
+
 
 ]
-<visual.pdf, id=512, page=1, 614.295pt x 794.97pt>
+<visual.pdf, id=518, page=1, 614.295pt x 794.97pt>
 File: visual.pdf Graphic file (type pdf)
  <use visual.pdf, page 1>
-Package pdftex.def Info: visual.pdf, page1 used on input line 1756.
+Package pdftex.def Info: visual.pdf, page1 used on input line 1750.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: visual.pdf Graphic file (type pdf)
 
 <use visual.pdf, page 1>
-Package pdftex.def Info: visual.pdf, page1 used on input line 1756.
+Package pdftex.def Info: visual.pdf, page1 used on input line 1750.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: visual.pdf Graphic file (type pdf)
  <use visual.pdf, page 1>
-Package pdftex.def Info: visual.pdf, page1 used on input line 1756.
+Package pdftex.def Info: visual.pdf, page1 used on input line 1750.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: visual.pdf Graphic file (type pdf)
  <use visual.pdf, page 1>
-Package pdftex.def Info: visual.pdf, page1 used on input line 1756.
+Package pdftex.def Info: visual.pdf, page1 used on input line 1750.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: visual.pdf Graphic file (type pdf)
 
 <use visual.pdf, page 1>
-Package pdftex.def Info: visual.pdf, page1 used on input line 1756.
+Package pdftex.def Info: visual.pdf, page1 used on input line 1750.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [56 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
-older/visual.pdf>] [57]
-<hybrid.pdf, id=544, page=1, 614.295pt x 1011.78pt>
+ [57 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+older/visual.pdf>] [58]
+<hybrid.pdf, id=550, page=1, 614.295pt x 1011.78pt>
 File: hybrid.pdf Graphic file (type pdf)
  <use hybrid.pdf, page 1>
-Package pdftex.def Info: hybrid.pdf, page1 used on input line 1764.
+Package pdftex.def Info: hybrid.pdf, page1 used on input line 1758.
 (pdftex.def)             Requested size: 614.29349pt x 1011.77753pt.
 File: hybrid.pdf Graphic file (type pdf)
 
 <use hybrid.pdf, page 1>
-Package pdftex.def Info: hybrid.pdf, page1 used on input line 1764.
+Package pdftex.def Info: hybrid.pdf, page1 used on input line 1758.
 (pdftex.def)             Requested size: 483.02875pt x 795.57677pt.
 File: hybrid.pdf Graphic file (type pdf)
  <use hybrid.pdf, page 1>
-Package pdftex.def Info: hybrid.pdf, page1 used on input line 1764.
+Package pdftex.def Info: hybrid.pdf, page1 used on input line 1758.
 (pdftex.def)             Requested size: 483.02875pt x 795.57677pt.
 File: hybrid.pdf Graphic file (type pdf)
  <use hybrid.pdf, page 1>
-Package pdftex.def Info: hybrid.pdf, page1 used on input line 1764.
+Package pdftex.def Info: hybrid.pdf, page1 used on input line 1758.
 (pdftex.def)             Requested size: 483.02875pt x 795.57677pt.
 File: hybrid.pdf Graphic file (type pdf)
 
 <use hybrid.pdf, page 1>
-Package pdftex.def Info: hybrid.pdf, page1 used on input line 1764.
+Package pdftex.def Info: hybrid.pdf, page1 used on input line 1758.
 (pdftex.def)             Requested size: 483.02875pt x 795.57677pt.
- [58 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+ [59 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
 older/hybrid.pdf>]
-<driver.pdf, id=553, page=1, 794.97pt x 614.295pt>
+<driver.pdf, id=559, page=1, 794.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 1>
-Package pdftex.def Info: driver.pdf, page1 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page1 used on input line 1760.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 1>
-Package pdftex.def Info: driver.pdf, page1 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page1 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 1>
-Package pdftex.def Info: driver.pdf, page1 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page1 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 1>
-Package pdftex.def Info: driver.pdf, page1 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page1 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 1>
-Package pdftex.def Info: driver.pdf, page1 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page1 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
- [59 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+ [60 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
 older/driver.pdf, page is rotated 90 degrees>]
-<driver.pdf, id=571, page=2, 794.97pt x 614.295pt>
+<driver.pdf, id=578, page=2, 794.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 2>
-Package pdftex.def Info: driver.pdf, page2 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page2 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 2>
-Package pdftex.def Info: driver.pdf, page2 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page2 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 2>
-Package pdftex.def Info: driver.pdf, page2 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page2 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
- [60 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
-older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=587, page=3, 794
+ [61 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=593, page=3, 794
 .97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 3>
-Package pdftex.def Info: driver.pdf, page3 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page3 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 3>
-Package pdftex.def Info: driver.pdf, page3 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page3 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 3>
-Package pdftex.def Info: driver.pdf, page3 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page3 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 
-[61 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
+[62 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
 lder/driver.pdf, page is rotated 90 degrees>]
-<driver.pdf, id=618, page=4, 794.97pt x 614.295pt>
+<driver.pdf, id=624, page=4, 794.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 4>
-Package pdftex.def Info: driver.pdf, page4 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page4 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 4>
-Package pdftex.def Info: driver.pdf, page4 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page4 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 4>
-Package pdftex.def Info: driver.pdf, page4 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page4 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
- [62 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
-older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=630, page=5, 794
+ [63 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=636, page=5, 794
 .97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 5>
-Package pdftex.def Info: driver.pdf, page5 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page5 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 5>
-Package pdftex.def Info: driver.pdf, page5 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page5 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 5>
-Package pdftex.def Info: driver.pdf, page5 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page5 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 
-[63 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
+[64 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
 lder/driver.pdf, page is rotated 90 degrees>]
-<driver.pdf, id=649, page=6, 794.97pt x 614.295pt>
+<driver.pdf, id=655, page=6, 794.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 6>
-Package pdftex.def Info: driver.pdf, page6 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page6 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 6>
-Package pdftex.def Info: driver.pdf, page6 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page6 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 6>
-Package pdftex.def Info: driver.pdf, page6 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page6 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
- [64 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
-older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=656, page=7, 794
+ [65 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=662, page=7, 794
 .97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 7>
-Package pdftex.def Info: driver.pdf, page7 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page7 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 7>
-Package pdftex.def Info: driver.pdf, page7 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page7 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 7>
-Package pdftex.def Info: driver.pdf, page7 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page7 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 
-[65 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
+[66 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
 lder/driver.pdf, page is rotated 90 degrees>]
-<driver.pdf, id=671, page=8, 794.97pt x 614.295pt>
+<driver.pdf, id=678, page=8, 794.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 8>
-Package pdftex.def Info: driver.pdf, page8 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page8 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 8>
-Package pdftex.def Info: driver.pdf, page8 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page8 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 8>
-Package pdftex.def Info: driver.pdf, page8 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page8 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
- [66 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
-older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=689, page=9, 794
+ [67 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=695, page=9, 794
 .97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 9>
-Package pdftex.def Info: driver.pdf, page9 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page9 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 9>
-Package pdftex.def Info: driver.pdf, page9 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page9 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 9>
-Package pdftex.def Info: driver.pdf, page9 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page9 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 
-[67 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
+[68 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
 lder/driver.pdf, page is rotated 90 degrees>]
-<driver.pdf, id=696, page=10, 794.97pt x 614.295pt>
+<driver.pdf, id=702, page=10, 794.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 10>
-Package pdftex.def Info: driver.pdf, page10 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page10 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 10>
-Package pdftex.def Info: driver.pdf, page10 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page10 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 10>
-Package pdftex.def Info: driver.pdf, page10 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page10 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
- [68 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
-older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=706, page=11, 79
+ [69 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=712, page=11, 79
 4.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 11>
-Package pdftex.def Info: driver.pdf, page11 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page11 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 11>
-Package pdftex.def Info: driver.pdf, page11 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page11 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 11>
-Package pdftex.def Info: driver.pdf, page11 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page11 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 
-[69 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
+[70 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
 lder/driver.pdf, page is rotated 90 degrees>]
-<driver.pdf, id=716, page=12, 794.97pt x 614.295pt>
+<driver.pdf, id=722, page=12, 794.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 12>
-Package pdftex.def Info: driver.pdf, page12 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page12 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 12>
-Package pdftex.def Info: driver.pdf, page12 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page12 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 12>
-Package pdftex.def Info: driver.pdf, page12 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page12 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
- [70 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
-older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=724, page=13, 79
+ [71 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=730, page=13, 79
 4.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 13>
-Package pdftex.def Info: driver.pdf, page13 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page13 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 13>
-Package pdftex.def Info: driver.pdf, page13 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page13 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 13>
-Package pdftex.def Info: driver.pdf, page13 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page13 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 
-[71 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
+[72 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
 lder/driver.pdf, page is rotated 90 degrees>]
-<driver.pdf, id=737, page=14, 794.97pt x 614.295pt>
+<driver.pdf, id=744, page=14, 794.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 14>
-Package pdftex.def Info: driver.pdf, page14 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page14 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 14>
-Package pdftex.def Info: driver.pdf, page14 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page14 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 14>
-Package pdftex.def Info: driver.pdf, page14 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page14 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
- [72 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
-older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=744, page=15, 79
+ [73 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+older/driver.pdf, page is rotated 90 degrees>] <driver.pdf, id=750, page=15, 79
 4.97pt x 614.295pt>
 File: driver.pdf Graphic file (type pdf)
 
 <use driver.pdf, page 15>
-Package pdftex.def Info: driver.pdf, page15 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page15 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 15>
-Package pdftex.def Info: driver.pdf, page15 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page15 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 File: driver.pdf Graphic file (type pdf)
  <use driver.pdf, page 15>
-Package pdftex.def Info: driver.pdf, page15 used on input line 1766.
+Package pdftex.def Info: driver.pdf, page15 used on input line 1760.
 (pdftex.def)             Requested size: 615.04005pt x 475.25821pt.
 
-[73 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
-lder/driver.pdf, page is rotated 90 degrees>] [74]
-<optical.pdf, id=759, page=1, 614.295pt x 794.97pt>
+[74 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex fo
+lder/driver.pdf, page is rotated 90 degrees>] [75]
+<optical.pdf, id=765, page=1, 614.295pt x 794.97pt>
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 1>
-Package pdftex.def Info: optical.pdf, page1 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page1 used on input line 1766.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: optical.pdf Graphic file (type pdf)
 
 <use optical.pdf, page 1>
-Package pdftex.def Info: optical.pdf, page1 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page1 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 1>
-Package pdftex.def Info: optical.pdf, page1 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page1 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 1>
-Package pdftex.def Info: optical.pdf, page1 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page1 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
 
 <use optical.pdf, page 1>
-Package pdftex.def Info: optical.pdf, page1 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page1 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [75 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+ [76 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
 older/optical.pdf>]
-<optical.pdf, id=881, page=2, 614.295pt x 794.97pt>
+<optical.pdf, id=887, page=2, 614.295pt x 794.97pt>
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 2>
-Package pdftex.def Info: optical.pdf, page2 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page2 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
 
 <use optical.pdf, page 2>
-Package pdftex.def Info: optical.pdf, page2 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page2 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 2>
-Package pdftex.def Info: optical.pdf, page2 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page2 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [76 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+ [77 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
 older/optical.pdf>]
-<optical.pdf, id=887, page=3, 614.295pt x 794.97pt>
+<optical.pdf, id=893, page=3, 614.295pt x 794.97pt>
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 3>
-Package pdftex.def Info: optical.pdf, page3 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page3 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
 
 <use optical.pdf, page 3>
-Package pdftex.def Info: optical.pdf, page3 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page3 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 3>
-Package pdftex.def Info: optical.pdf, page3 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page3 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [77 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+ [78 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
 older/optical.pdf>]
-<optical.pdf, id=893, page=4, 614.295pt x 794.97pt>
+<optical.pdf, id=900, page=4, 614.295pt x 794.97pt>
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 4>
-Package pdftex.def Info: optical.pdf, page4 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page4 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
 
 <use optical.pdf, page 4>
-Package pdftex.def Info: optical.pdf, page4 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page4 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 4>
-Package pdftex.def Info: optical.pdf, page4 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page4 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [78 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+ [79 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
 older/optical.pdf>]
-<optical.pdf, id=900, page=5, 614.295pt x 794.97pt>
+<optical.pdf, id=906, page=5, 614.295pt x 794.97pt>
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 5>
-Package pdftex.def Info: optical.pdf, page5 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page5 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
 
 <use optical.pdf, page 5>
-Package pdftex.def Info: optical.pdf, page5 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page5 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 5>
-Package pdftex.def Info: optical.pdf, page5 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page5 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [79 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+ [80 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
 older/optical.pdf>]
-<optical.pdf, id=906, page=6, 614.295pt x 794.97pt>
+<optical.pdf, id=912, page=6, 614.295pt x 794.97pt>
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 6>
-Package pdftex.def Info: optical.pdf, page6 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page6 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
 
 <use optical.pdf, page 6>
-Package pdftex.def Info: optical.pdf, page6 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page6 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 6>
-Package pdftex.def Info: optical.pdf, page6 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page6 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [80 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+ [81 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
 older/optical.pdf>]
-<optical.pdf, id=912, page=7, 614.295pt x 794.97pt>
+<optical.pdf, id=918, page=7, 614.295pt x 794.97pt>
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 7>
-Package pdftex.def Info: optical.pdf, page7 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page7 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
 
 <use optical.pdf, page 7>
-Package pdftex.def Info: optical.pdf, page7 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page7 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: optical.pdf Graphic file (type pdf)
  <use optical.pdf, page 7>
-Package pdftex.def Info: optical.pdf, page7 used on input line 1772.
+Package pdftex.def Info: optical.pdf, page7 used on input line 1766.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [81 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
+ [82 <C:/Users/Branden/Documents/School/Capstone2015/Documentation/Report/tex f
 older/optical.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1775.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1775.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1769.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1769.
 
 ("C:\Users\Branden\Documents\School\Capstone2015\Documentation\Report\tex folde
 r\Report_NEW.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1775.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1775.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1769.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1769.
 
 Package rerunfilecheck Info: File `Report_NEW.out' has not changed.
 (rerunfilecheck)             Checksum: C4031EACD50F0B141A9B5FF80DA509EE;2366.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1775.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1769.
  ) 
 Here is how much of TeX's memory you used:
- 19787 strings out of 494049
- 342546 string characters out of 3146114
- 569125 words of memory out of 3000000
- 22484 multiletter control sequences out of 15000+200000
+ 19792 strings out of 494049
+ 342584 string characters out of 3146114
+ 546706 words of memory out of 3000000
+ 22488 multiletter control sequences out of 15000+200000
  15460 words of font info for 54 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 56i,20n,73p,1799b,621s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,20n,73p,1799b,690s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Branden\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cbgreek\dp
 i600\grxn1200.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
@@ -1999,9 +1970,9 @@ mmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
 b10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report_NEW.pdf (82 pages, 11874778 bytes).
+Output written on Report_NEW.pdf (83 pages, 11820195 bytes).
 PDF statistics:
- 983 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
+ 989 PDF objects out of 1000 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
  677 words of extra memory for PDF output out of 10000 (max. 10000000)
 
