@@ -1,0 +1,39 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Project Overview}{3}{section.1}
+\contentsline {section}{\numberline {2}Project Proposal}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Sponsor Proposal}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}The Goal}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Our Starting Point}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Requirements}{5}{subsection.2.4}
+\contentsline {section}{\numberline {3}Schedule}{7}{section.3}
+\contentsline {section}{\numberline {4}Hardware}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Welder Control}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Breakout Boards}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Temperature Sensor}{10}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Incremental Encoder}{11}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Relay and Indication Module}{13}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Stepper Motor Controller}{15}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}PWM Controller}{16}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Current Sensor}{17}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}Wire Speed}{19}{subsection.4.9}
+\contentsline {subsection}{\numberline {4.10}Pin Assignments}{20}{subsection.4.10}
+\contentsline {section}{\numberline {5}Software}{24}{section.5}
+\contentsline {subsection}{\numberline {5.1}Software Description}{24}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}G-Code}{25}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Control Program}{26}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Register Descriptions}{31}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}GUI Description}{33}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}The Graphical User Interface (GUI)}{33}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Reasons for using GTK+}{33}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Examples of GUIs created using GTK+}{35}{subsection.5.8}
+\contentsline {section}{\numberline {6}Testing}{37}{section.6}
+\contentsline {subsection}{\numberline {6.1}CNC Confirmation Test}{37}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Wire Feed Test}{38}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Weld Quality Test}{40}{subsection.6.3}
+\contentsline {section}{\numberline {7}Photos and Videos of Progress}{49}{section.7}
+\contentsline {section}{\numberline {8}Bill of Materials (BOM)}{53}{section.8}
+\contentsline {section}{Appendix A}{55}{section*.4}
+\contentsline {section}{Appendix B}{55}{section*.5}
+\contentsline {section}{Appendix C}{55}{section*.6}
+\contentsline {section}{Appendix D}{57}{section*.7}
+\contentsline {section}{Appendix E}{74}{section*.8}
