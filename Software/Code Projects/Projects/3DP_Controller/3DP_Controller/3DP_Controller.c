@@ -152,6 +152,7 @@ static int WatchDogEnable()
 	return 0;
 }
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //              Functions below this point were written by the 2015 capstone group.                       //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -180,7 +181,7 @@ static int WatchDogEnable()
 #define MAXCNCSETTING 5.8f
 #define WELDDUTYCYCLE 120000000
 #define COUNTSPERREV 5000
-#define NOMINALDROPLETTIME 9000
+#define NOMINALDROPLETTIME 8900
 
 
 /*
@@ -192,17 +193,17 @@ Function Description: The function checks for the overflow of the 826's on-board
 
 static void ElapsedTime(uint TimeStampOld, uint *time) 	//takes board number, a time stamp from main, and a pointer to a time value in main, checks for time overflow and returns an elapsed time.
 {
-	uint64_t Tmax = 4294967296;							// maximum time of the 826 on-board clock in microseconds
-	uint TimeStampNew;									// initialize a local timestamp to compare with
+	uint64_t Tmax = 4294967296;							//maximum time of the 826 on-board clock in microseconds
+	uint TimeStampNew;									//init a local timestamp to compare with
 
-	S826_TimestampRead(BRD, &TimeStampNew);				// get a new time stamp for the comparison
-	if (TimeStampOld > TimeStampNew)					// check for time overflow
+	S826_TimestampRead(BRD, &TimeStampNew);				//get a new time stamp for the comparison
+	if (TimeStampOld > TimeStampNew)					//check for time overflow
 	{
-		*time = Tmax - TimeStampOld + TimeStampNew;		// difference in time calculation if there is a clock overflow
+		*time = Tmax - TimeStampOld + TimeStampNew;		//difference in time calculation if there is a clock overflow
 	}
 	else
 	{
-		*time = (TimeStampNew - TimeStampOld);			// difference in time calculation
+		*time = (TimeStampNew - TimeStampOld);			//difference in time calculation
 	}
 }
 
@@ -214,7 +215,7 @@ Function Description: The function obtains a snapshot of the counts buffer from 
 */
 static void WireSpeed(float *WireSpeed)
 {
-	float dia = 0.975f;		// radius of wheel attached to the encoder in inches
+	float dia = 0.975f;		//radius of wheel attached to the encoder in inches
 	int tmax = 1000000;		// max interval time in microseconds, this will wait until event edge event is detected
 	uint val = 0;
 	uint timestamp, reason;
@@ -223,11 +224,11 @@ static void WireSpeed(float *WireSpeed)
 	S826_CounterSnapshotRead(BRD, chan, &val, &timestamp, &reason, tmax); //Obtain a snapshot of what the counts buffer has after tmax time
 
 	float pi = 3.1415f;
-	float numerator = val * pi * dia;				// calculate the numerator value for linear velocity
+	float numerator = val * pi * dia;			// calculate the numerator value for linear velocity
 	float denominator = COUNTSPERREV * 0.1f;		// SECOND NUMBER IN DENOMINATOR IS ENCODER SAMPLE TIME, IF SAMPLE TIME IS CHANGED IN CounterFrequencyIni FUNCTION, THIS NUMBER NEEDS TO REFLECT THAT CHANGE
-	float lin = numerator / denominator;			// calculates the linear velocity of wirefeed in inches/second
+	float lin = numerator / denominator;		// calculates the linear velocity of wirefeed in inches/second
 	*WireSpeed = lin;
-	printf("Wire Feed = %.2f in/sec\t\n", lin);		// display the current linear velocity, should update every second.
+	printf("Wire Feed = %.2f in/sec\t\n", lin);	// display the current linear velocity, should update every second.
 }
 
 /*
@@ -249,6 +250,7 @@ static void CounterFrequencyIni() //Function for initializing counter in frequen
 	S826_CounterPreloadWrite(BRD, chan, preload0reg, PLcount);		   	// use the CounterPreloadWrite function to pre-load 0 into the counts buffer.
 	S826_CounterStateWrite(BRD, chan, 1);								// Activate counter
 }
+
 
 /*
 Function Name: Halt CNC and Weld
@@ -289,17 +291,16 @@ static void ErrorDecode(int error)
 		printf("Unknown error");
 		break;
 	}
-	
+
 #ifndef _LINUX	
 	printf("\nKeypress to exit ...\n\n");
 	while (!_kbhit());						// wait for key press from user
 	_getch();
 #endif
-	
+
 	S826_SystemClose();						// end the 826's processes
 	exit(0);								// end the program
 }
-
 /*
 Function Name: Get and update G0/G1
 Inputs: Board number, Pointer to an array of DIO Inputs, and Pointer to an array of DIO Outputs
@@ -331,16 +332,15 @@ static void GetAndUpdateG0G1(uint *diostatesA, uint *diostatesB)
 
 	diostatesA[0] = ~diostatesA[0];
 	diostatesA[0] &= G1G0INPUTMASK;						// masking to the first two bits of the 3rd byte (channels 19 & 18)
-	
+
 	if (diostatesA[0] == G1G0INVALIDINPUT)				// check if G0G1 are in unrecognised states, i.e. 11
 	{
 		HaltCncAndWeld();								// Stop CNC machine AND welder
 		int PrintError = 0;								// Set the error code for unrecognised states
 		ErrorDecode(PrintError);						// decode the error and halt program
 	}
-	
-}
 
+}
 /*
 Function Name: Get Input G0/G1
 Inputs: Board number, Pointer to an array of DIO Inputs, an error code variable
@@ -349,15 +349,15 @@ Function Description: Reads and updates the current G0/G1 input states. The func
 */
 static void GetInputG0G1(uint *diostatesA, int PrintError)
 {
-	S826_DioInputRead(BRD, diostatesA);		// read the digital input states
-	diostatesA[0] &= G1G0INPUTMASK;  		// masking to the first two bits of the 3rd byte (channels 19 & 18)
+	S826_DioInputRead(BRD, diostatesA);		//read the digital input states
+	diostatesA[0] &= G1G0INPUTMASK;  		//masking to the first two bits of the 3rd byte (channels 19 & 18)
 
 	
-	if (diostatesA[0] == G1G0INVALIDINPUT) 	// check if G0G1 are in unrecognised states, i.e. 11
+	if (diostatesA[0] == G1G0INVALIDINPUT) 	//check if G0G1 are in unrecognized states, i.e. 11
 	{
-		HaltCncAndWeld();					// Stop CNC machine AND welder
-		PrintError = 0;						// Set the error code for unrecognised states
-		ErrorDecode(PrintError);			// decode the error and halt program
+		HaltCncAndWeld();					//Stop CNC machine AND welder
+		PrintError = 0;						//Set the error code for unrecognized states
+		ErrorDecode(PrintError);			//decode the error and halt program
 	}
 	
 }
@@ -429,7 +429,7 @@ static void DropletSpacing(float *AverageTime, uint RunType)
 			{
 				break;
 			}
-			
+
 		}
 	}
 
@@ -542,11 +542,12 @@ Prompt:
 		printf("Please input your CNC Speed, Note speed must be between 5.2 in/s and 5.8 in/s:\n ");
 		scanf_s("%f", &CNCSpeed);																		// scan for a new input value.
 	}
-	
+
 	printf("CNC speed is valid, setting up the system now.\n\n");
 
 	*WireSpeedSetting = 3;																				//Give wire speed a value. This is hard coded to 3 in/s because that seems to work best for the range of CNC speed we're requiring. The Adjustment handles the fine tuning later.
 }
+
 
 /*
 Function Name: Calibrate Wire Speed
@@ -583,13 +584,13 @@ static void CalibrateWireSpeed(float *HomeOffset)
 		WireSpeed(&WSpeed);														// measure the wire speed
 		AvgWireSpeed = AvgWireSpeed + WSpeed;									// Calculate the average
 		Sleep(250);																// wait 250 mS
-	}																		
+	}
 
 	S826_DioOutputWrite(BRD, WeldOn, 1);										// Turn the welder off
 
 	*HomeOffset = AvgWireSpeed / 10;											// calculate the home offset
 	printf("Home Offset = %f\n", *HomeOffset);									// display the home offset
-	Sleep(1000);														
+	Sleep(1000);
 	printf("Calibration Complete...\n\n");
 }
 
@@ -614,6 +615,8 @@ Function Name: Error Calculation
 Inputs: Board number, Droplet time variable, Nominal Droplet Time Variable, and a pointer to a Droplet Error Variable.
 Outputs/Updates: Updates: Droplet Error variable
 Function Description: Function updates the global average droplet error array with the input droplet error, and calculates the percent error between the nominal droplet time and the input droplet time. This is then stored in the main line's Droplet Error variable.
+
+Known Issue: A large droplet time can cause an large adjustment. Possible fix is to throw out large values.
 */
 static void ErrorCalculation(float DropletTime, float *AvgDropletError, float DropletErrors[])
 {
@@ -644,16 +647,19 @@ int main(void)
 	uint Peaks = 0;															// number of peaks counted in the loop
 	uint InputStates[2] = { 0, 0 };											// Array to hold the DIO input pinstates
 	uint OutputStates[2];													// Array to hold the DIO output states
+	uint time;
 
 	float WireSpeed = 0.0f;													// Variable to pass setting if the Wire Speed knob
 	float HomeOffset = 0.0f;												// Initial Wire speed position
 	float Temp = 0.0f;														// Variable for Temperature
-	float DropletErrors[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };				// Array used to calculate average error
+	float DropletErrors[10];				// Array used to calculate average error
 	float DropletTime = 0.0f;												// Variable to hold measured droplet time
 	float InitialWireSpeedSetting = 0.0f;									// Variable to hold inital wre speed
 	float NominalDropletTime = 0.0f;										// Variable to hold nominal droplet time
 	float AvgDropletError = 0.0f;											// Variable to hold average droplet error
 	float AdjustedWireSpeed = 0.0f;											// Variable to hold 
+
+	float DropletErrorSize = sizeof(DropletErrors) / sizeof(float);
 
 	uint StartCNCMask[2] = {STARTCNCMASK, 0};								// Array to used to change pinstate to turn on and off CNC Machine
 
@@ -700,31 +706,41 @@ InitialPosition:															// Label to jump to for inital loop
 		//printf("Found G1\n\n");											// Confirm that G1 has been sensed. For debugging.
 		HaltCncAndWeld();      												// Halt CNC movement and welder to prepare for temperature read
 
-		GetTemp(&Temp);     												// Measure temperature
-		while (Temp > HIGHTEMPTHRESHOLD)									// When the temp is too hot
-		{
-			////////////////////////////////////////////////////////
-			// Run Torch Routine: This is a manual process for now//
-			////////////////////////////////////////////////////////
-			GetTemp(&Temp);													// Measure temperature
-			printf("Current temperature:, %f\n)", Temp);					// Diaplay Temp
-
-		}
-
-		S826_TimestampRead(BRD, &DutyCycleTimeStamp);    					// Get TimeStamp
+		
 		GetAndUpdateG0G1(&InputStates, &OutputStates);      				// Use relay to start welder
 		DropletSpacing(NULL, SPIKECHECK);      								// Read current spikes, If current spikes = 0, ERROR. Stop welder and CNC. Exit Program
 
 
 		S826_DioOutputWrite(BRD, StartCNCMask, 1);      					// Start CNC movement
-
+G0Wait:
 		do
-		{																	
+		{	
+
+			/*
+			GetTemp(&Temp);     												// Measure temperature
+			while (Temp > HIGHTEMPTHRESHOLD)									// When the temp is too hot
+			{
+				HaltCncAndWeld();
+				////////////////////////////////////////////////////////
+				// Run Torch Routine: This is a manual process for now//
+				////////////////////////////////////////////////////////
+				GetTemp(&Temp);													// Measure temperature
+				printf("Current temperature:, %f\n)", Temp);					// Diaplay Temp
+
+			}
+
+
+			S826_DioOutputWrite(BRD, StartCNCMask, 1);      					// Start CNC movement
+			*/
+
 			GetAndUpdateG0G1(&InputStates[0], &OutputStates[0]);			// Update G1G0 State
+			Sleep(1);														// Short pause to avoid Read/Write timing violation
 		} while (InputStates[0] != G1INPUTACTIVE);							// While G1 is not asserted & G0 is asserted
 
 
 
+		Sleep(50);
+		S826_TimestampRead(BRD, &DutyCycleTimeStamp);    					// Get TimeStamp
 
 		while (InputStates[0] == G1INPUTACTIVE)								// While G1 is asserted & G0 is not asserted
 		{
@@ -733,13 +749,13 @@ InitialPosition:															// Label to jump to for inital loop
 			ErrorCalculation(DropletTime, &AvgDropletError, DropletErrors);	// Calculate error from nominal droplet spacing
 			if (loop >= 10)													// Wait till average error array fills
 			{																// Once average error array is full
-				if (AvgDropletError >= .6f || AvgDropletError <= -.6f)		// If the error is more or less than +/-60%
+				if (AvgDropletError >= .5f || AvgDropletError <= -.5f)		// If the error is more or less than +/-60%
 				{
 					HaltCncAndWeld();										// Stop the CNC Machine and Welder		
 					PrintError = 2;											// Set error code
 					ErrorDecode(PrintError);								// Display error and end program
 				}
-				else (AvgDropletError >= 0.1f || AvgDropletError <= -0.1f)	// If Average Error is above or below +/-10%
+				else if (AvgDropletError >= 0.25f || AvgDropletError <= -0.25f)	// If Average Error is above or below +/-10%
 				{
 					AdjustedWireSpeed = AvgDropletError * -1;				// Scale and negate value for negative feedback.
 					SetWireSpeed(&AdjustedWireSpeed);						// Adjust the wirespeed, proportional to the error
@@ -767,7 +783,7 @@ InitialPosition:															// Label to jump to for inital loop
 			GetAndUpdateG0G1(&InputStates[0], &OutputStates[0]);			// Check G1G0 state
 			if (InputStates[0] == G0INPUTACTIVE)							// If G0 is asserted and G1 is not asserted
 			{
-				goto InitialPosition;										
+				goto G0Wait;										
 			}
 			loop++;															// Increment main loop count
 		}
