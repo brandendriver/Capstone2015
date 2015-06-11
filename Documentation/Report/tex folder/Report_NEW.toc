@@ -31,10 +31,12 @@
 \contentsline {subsection}{\numberline {6.2}Wire Feed Test}{39}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Weld Quality Test}{41}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}Degrees to Wire Speed Test}{49}{subsection.6.4}
-\contentsline {section}{\numberline {7}Photos and Videos of Progress}{50}{section.7}
-\contentsline {section}{\numberline {8}Bill of Materials (BOM)}{54}{section.8}
-\contentsline {section}{Appendix A}{56}{section*.4}
-\contentsline {section}{Appendix B}{56}{section*.5}
-\contentsline {section}{Appendix C}{56}{section*.6}
-\contentsline {section}{Appendix D}{58}{section*.7}
-\contentsline {section}{Appendix E}{75}{section*.8}
+\contentsline {section}{\numberline {7}Problems Faced}{50}{section.7}
+\contentsline {section}{\numberline {8}Future Work}{50}{section.8}
+\contentsline {section}{\numberline {9}Photos and Videos of Progress}{51}{section.9}
+\contentsline {section}{\numberline {10}Bill of Materials (BOM)}{56}{section.10}
+\contentsline {section}{Appendix A}{58}{section*.4}
+\contentsline {section}{Appendix B}{58}{section*.5}
+\contentsline {section}{Appendix C}{58}{section*.6}
+\contentsline {section}{Appendix D}{60}{section*.7}
+\contentsline {section}{Appendix E}{77}{section*.8}

@@ -236,7 +236,7 @@ The idea for metal deposition and an example that uses a laser can be found at:\
 
 \subsection{Welder Control}
 
-\indent To control the welder, a central control module will be used. This was a hot topic of debate for several weeks, as the number of choices available for this project are very high. The sponsor's requirements for the project was that all of the control work was done by a separate computer from the one used by Linux CNC, this only narrowed it down to a choice between a PCIe DAC board and a single board computer. Based on the need for both analog and digital control pins and the need for future expansion, we researched and came up with several options.
+\indent To control the welder, a central control module will be used. This was a hot topic of debate for several weeks, as the number of choices available for this project are very high. The sponsor's requirements for the project was that all of the control work was done by a separate computer from the one used by Linux CNC, this only narrowed it down to a choice between a PCI-Express DAQ board and a single board computer. Based on the need for both analog and digital control pins and the need for future expansion, we researched and came up with several options.
 
 
 \begin{center}
@@ -256,7 +256,7 @@ The idea for metal deposition and an example that uses a laser can be found at:\
 \end{center}
 
 
-\indent In the end we chose the Sensoray 826 board because for the price it outperforms all other boards on the market by having 16 analog inputs, 8 analog outputs, and 48 digital I/O pins. This board was chosen for the high level of future expandability that it has, and because it is a PCIe card which can be packaged into its own desktop as per request from the sponsor.\
+\indent In the end we chose the Sensoray 826 board because for the price it outperforms all other boards on the market by having 16 analog inputs, 8 analog outputs, and 48 digital I/O pins. This board was chosen for the high level of future expandability that it has, and because it is a PCI-Express card which can be packaged into its own desktop as per request from the sponsor.\
 
 
 
@@ -273,7 +273,7 @@ To control the current to the weld and the wire speed of the welder, two stepper
 
 \subsection{Breakout Boards}
 
-\indent To easily connect to the Sensoray 826 board, several breakout boards with screw terminals were made. There are two types of break out boards, a 50-pin board and a 26-pin board. 50 pin boards are used to connect to the digital and analog pins of the control board, while 26 pin boards are used to connect to the various counter channels. Shown below are mages of the boards them selves. With the empty side of the board facing you, the screw terminals are in order from 1 to 50/26 starting on the right hand side. \\
+\indent To easily connect to the Sensoray 826 board, several breakout boards with screw terminals were made. There are two types of break out boards, a 50-pin board and a 26-pin board. 50 pin boards are used to connect to the digital and analog pins of the control board, while 26 pin boards are used to connect to the various counter channels. Shown below are images of the boards them selves. With the empty side of the board facing you, the screw terminals are in order from 1 to 50/26 starting on the right hand side. \\
 
 
 \begin{figure}[!h]
@@ -1515,9 +1515,44 @@ Determining the amount to turn the wire speed knob to increase the overall wire 
 			Run 13 &	1 &	7 &	235 &	39.16666667 &	22222 &	5222170 \\ \tabucline[2pt]{-}
 			       &	  &   & \thead{Average} & \thead{39.66179654} & & \\ \hline
 	\end{tabu}
-	\captionof{table}{Test Results to Detemine Degrees to Turn for 1-inch Increase in Wire Speed}
+	\captionof{table}{Test Results to Determine Degrees to Turn for 1-inch Increase in Wire Speed}
 \end{center}
 \clearpage
+
+
+
+
+
+\section{Problems Faced}
+\indent There were several problems faced throughout this project. From the very beginning to the end, there were problems with the CNC machine. At the beginning of the project, the CNC was only semi-functional. The industry sponsor built the CNC in 2006 as part of his Masters Degree. It had not been used much sense then, so there were a lot of kinks and various wiring issues that needed to be resolved. At the beginning of the project, a fair amount of time was used to just get the CNC working correctly. 
+
+
+\indent Due to using time to get the CNC working properly, as well as other issues faced, time management was another problem faced in this project. Because not enough time was put in during the first half of the project, the second half required a lot more work. Meetings increased from one a week to several times a week, often with the group meeting until after midnight to work on different aspects of the project. 
+
+\indent Another issue that caused a problem was the temperature sensor. Early on in the project, the sponsor purchased an IR temperature sensor. At the time, it seemed like the purchased sensor would be able to accomplish the necessary tasks. However, after looking into the documentation a little more closely, it was discovered that the distance of measurement was about 30 inches. In other words, the sensor needed to be placed 30 inches from what needed to be measured. This was an issue in that the printer enclosure didn't allow for distance. A new temperature sensor was ordered, this time one that only needed 18 inches. This was still a bit too long, but was much more acceptable. 
+
+\indent At the end of the project when the temperature sensor was finally being implemented, it was discovered the the temperature ranges of the sensor were unacceptable. Measurements were needed to ensure the area of deposition was within a set threshold: not too hot nor too cold. The lowest readable range of the sensor was 800 $^\circ$C, whereas the required reading was only about 250 $^\circ$C. Once again, the sensor would not adequately accomplish it's task. Due to the limited time left, the temperature sensor was abandoned at this point.
+
+\indent The last major issue faced was the wire speed in accordance with the current setting. In testing the wire feed settings, it was discovered that for certain settings the wire speed was being hindered by the low current. With a lower current and a higher wire speed, the wire would hit the baseplate, but due to the low current setting, the wire wouldn't melt fast enough. This caused the wire to get jammed up and feed at a rate slower than what was specified. For example, testing showed that for a current setting of `B', any wire feed speed above about three inches per minute would be slowed down by the low current setting. Granted, the movement speed of the CNC machine would also play a role, but for a large portion of the testing, the CNC speed was constant. 
+
+
+
+
+\section{Future Work}
+\indent This project was in principle of proof-of-concept. That being said, there's a lot of future work to be done to improve on the final output of the project. The first, and perhaps most important of these would be the temperature control. Because of the issues faced with the temperature sensors, temperature control ended up not being a part of this project. 
+
+\indent For the intial layer of deposition, it's important to heat up the baseplate. If the baseplate is too cold, the output will be a cold weld, which is not an ideal circumstance. If following layers are deposited onto a surface that is too hot, the deposition will re-melt the previous layer and any manner of precision will be lost. To control both of these problems, a heating and measurement system should be put in place. 
+
+\indent The first step would be to install a sensor that will get appropriate readings. Once this is in place, the control program can be slightly altered to start and stop the CNC if the weld is too hot or too cold. After the sensor is working properly, the following step would be to develop a torch routine. The sponsor would like to use an acetylene torch to heat up the system when it is too cold. A control program would need to be developed for this, as well as the physical mechanism to control the heating process. Once the sensor and torch are in place, the system would then be able to run by itself and make deposits on layers of the ideal temperature. In addition, too speed up the overall process, a cooling system could also be installed. Currently, there is a manual waiting period of about two minutes in between layers of deposition. This time could be dramatically decreased if a system was in place to force the temperature to drop, rather than just waiting for the previous layer to cool naturally. It should be noted the the results of forcing the temperature to drop are unknown. Doing so may cause unexpected results to the deposition.
+
+\indent The next major step would be to incorporate a GUI with live feedback of the properties of the weld. This was a request of the sponsor at the beginning of the project, but due to time constraints was abandoned. Included in this GUI, the sponsor would like to be able to adjust the control components of the project, such as wire feed speed or the temperature settings. 
+
+\indent Another improvement to this project would be to allow the control program to control the CNC speed. The speed of the CNC is controlled by an analog signal that can be adjusted to any value between the set min and max. Currently, this controller is hooked up to a digital signal and was used only to start and stop the CNC. Further advances could be made to put this on one of the analog pins and allow the control program to entirely control the CNC movement speed. There are some considerations that must be met for this to work properly, such as the fact that the max CNC speed would be set only in LinuxCNC.
+
+\indent Other additions that could be made to increase the overall precision of deposition would be automated control of the current setting on the welder and better wire speed control. In testing, it appeared that a higher current setting worked better for the initial layer of deposition, while a lower setting worked better for following layers. As of the end of this project, this control was done manually. However, this could easily be accomplished using a stepper motor. Regarding the wire feed speed, it would be beneficial to find a way to overcome the limitations of the wire speed set by the current setting. 
+
+
+
 
 
 \section{Photos and Videos of Progress}
